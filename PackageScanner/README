@@ -1,0 +1,12 @@
+
+继承Job
+    重写do方法,实现单个扫描逻辑
+
+继承OutputFormatter
+    重写printResult
+    report_object参数为Job::do()方法的返回值
+    在printResult中进行打印
+
+继承Scanner_v1
+    重写createJobs
+    用于生成Job对象

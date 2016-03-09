@@ -1,0 +1,29 @@
+根DNS
+.			154980	IN	NS	k.root-servers.net.
+.			154980	IN	NS	l.root-servers.net.
+.			154980	IN	NS	e.root-servers.net.
+.			154980	IN	NS	i.root-servers.net.
+.			154980	IN	NS	h.root-servers.net.
+.			154980	IN	NS	j.root-servers.net.
+.			154980	IN	NS	f.root-servers.net.
+.			154980	IN	NS	a.root-servers.net.
+.			154980	IN	NS	g.root-servers.net.
+.			154980	IN	NS	d.root-servers.net.
+.			154980	IN	NS	b.root-servers.net.
+.			154980	IN	NS	c.root-servers.net.
+.			154980	IN	NS	m.root-servers.net.
+
+windows:保存在%systemroot%/system32/dnschache.dns
+
+使用getaddrinfo对域名进行解析,无法自定义DNS(需要引入DNSLib)
+DNS为防止放大攻击而启用Response Rate Limiting机制,导致DNS查询速度缓慢
+
+TODO
+    泛解析
+    域传送
+
+
+
+
+
+
