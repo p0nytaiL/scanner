@@ -8,7 +8,7 @@ from PackageScanner.Scanner import Scanner_v1
 
 
 class FindHTTPServer(Scanner_v1):
-    def __init__(self, ports = [80,81,82,83,84,85,86,87,88,89,90,311,383,443,591,593,631,901,1220,1414,1741,1830,2301,2381,2809,3037,3057,3128,3443,3702,4343,4848,5250,6080,6988,7000,7001,7007,7144,7145,7510,7777,7779,8000,8008,8014,8028,8080,8085,8088,8090,8118,8123,8180,8181,8222,8243,8280,8300,8500,8800,8888,8899,9000,9060,9080,9090,9091,9443,9999,10000,11371,34443,34444,41080,50000,50002,55555]):
+    def __init__(self, ports):
         Scanner_v1.__init__(self)
         self._ports = ports
         self._outputFormatters.append(OutputFormatterConsoleHTTPServer())

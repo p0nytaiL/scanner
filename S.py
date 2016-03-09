@@ -6,7 +6,7 @@ import socket
 
 import optparse
 import netaddr
-from PackageScanner.Functions.Subnet.HTTPServer import FindHTTPServer
+from PackageScanner.Functions.Subnet.FindHTTPServer import FindHTTPServer
 from PackageScanner.Functions.DNS.Domain_v1 import FindSubDomain
 
 def process_command_line(argv):
@@ -32,7 +32,10 @@ def process_command_line(argv):
                   help="target/targets: domain name(full qualified domain name), subnet, IP...", metavar="TARGET")
 
     parser.add_option("-d", "--dictionary", dest="dictionary", default='small',
-                  help="target/targets: dictionary name...", metavar="TARGET")
+                  help="dictionary name: test, small, large...", metavar="DIRECTORY")
+
+    parser.add_option("-p", "--ports", dest="ports", default='small',
+                  help="--ports=80,81,8080...", metavar="PORTS")
 
     '''
     parser.add_option("-t", "--timeout", dest="timeout", default=3,
@@ -61,7 +64,15 @@ def main(argv=None):
     function = settings.function
     if function == 'findhttpserver':
         target = netaddr.IPNetwork(settings.target)
-        scanner = FindHTTPServer()
+        target_ports = []
+        if len(settings.ports) == 0:
+            target_ports = [80,81,82,83,84,85,86,87,88,89,90,311,383,443,591,593,631,901,1220,1414,1741,1830,2301,2381,2809,3037,3057,3128,3443,3702,4343,4848,5250,6080,6988,7000,7001,7007,7144,7145,7510,7777,7779,8000,8008,8014,8028,8080,8085,8088,8090,8118,8123,8180,8181,8222,8243,8280,8300,8500,8800,8888,8899,9000,9060,9080,9090,9091,9443,9999,10000,11371,34443,34444,41080,50000,50002,55555]
+        else:
+            ports = settings.ports.split(',')
+            for port in ports:
+                target_ports.append(int(port))
+
+        scanner = FindHTTPServer(ports=target_ports)
         scanner._description = str(target.network)
 
     elif function == 'findsubdomain':
