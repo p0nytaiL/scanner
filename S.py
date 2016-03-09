@@ -34,7 +34,7 @@ def process_command_line(argv):
     parser.add_option("-d", "--dictionary", dest="dictionary", default='small',
                   help="dictionary name: test, small, large...", metavar="DIRECTORY")
 
-    parser.add_option("-p", "--ports", dest="ports", default='small',
+    parser.add_option("-p", "--ports", dest="ports", default='',
                   help="--ports=80,81,8080...", metavar="PORTS")
 
     '''
