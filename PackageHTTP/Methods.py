@@ -85,12 +85,18 @@ class HTTPMethod:
 
         # telnet 80
         # GET:Connection closed by foreign host.
-        except httplib.BadStatusLine as e2:
-            raise Exception('Connection closed by foreign host.')
+        #except httplib.BadStatusLine as e2:
+        #    raise Exception('Connection closed by foreign host.')
 
-        # 54 Connection reset by peer
+        #仅捕获超时错误
         except Exception as e:
-            error = e
+            if isinstance(e, socket.timeout):
+                http_error = e
+            else:
+                raise e
+                # 54 Connection reset by peer
+                # 64 Host is down
+
 
         http_conn.close()
         return response, http_error
@@ -215,7 +221,9 @@ class HTTPMethodGETRobots(HTTPMethodGET):
     def handleResponse(self, raw_response):
         pass
     '''
-
+'''
+尝试获取title与h1
+'''
 class HTTPMethodGETPage(HTTPMethodGET):
     def __init__(self):
         HTTPMethodGET.__init__(self)
@@ -226,20 +234,28 @@ class HTTPMethodGETPage(HTTPMethodGET):
         result = {
             'title':''
         }
-        #if resp['status'] == 200:
-        try:
-            body = HTTPBodyResponse()
-            unicode_body = body.decodeBody(resp['headers'], resp['body'])
-            dom_body = html.fromstring(unicode_body)
-            title = dom_body.xpath('//title')
-            if len(title) > 0:
-                title = title[0].text
-                if title != None:
-                    result['title'] = title.encode('utf-8')
-                    result['title'] = result['title'].strip()
-        #
-        except Exception as e:
-            error = 'parse title error'
+        if error == None:
+            try:
+                body = HTTPBodyResponse()
+                unicode_body = body.decodeBody(resp['headers'], resp['body'])
+                dom_body = html.fromstring(unicode_body)
+                title = dom_body.xpath('//title')
+                if len(title) > 0:
+                    title = title[0].text
+                    if title != None:
+                        result['title'] = title.encode('utf-8')
+                        result['title'] = result['title'].strip()
+                elif len(title) == 0:
+                    title = dom_body.xpath('//h1')
+                    if len(title) > 0:
+                        title = title[0].text
+                        if title != None:
+                            result['title'] = title.encode('utf-8')
+                            result['title'] = result['title'].strip()
+            #
+            except Exception as e:
+                error = 'parse title error'
+
         return result, error
 
 if __name__ == '__main__':

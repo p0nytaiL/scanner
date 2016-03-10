@@ -51,13 +51,14 @@ class HTTPHeaderJob(Job):
             count_timeout = 0
             exceptions = [self.result['error_head'], self.result['error_options'], self.result['error_body'], self.result['error_robots']]
             for exception in exceptions:
-                if type(exception) == type(socket.timeout):
+                if isinstance(exception, socket.timeout):
                     count_timeout = count_timeout + 1
 
             if count_timeout == 4:
                 self.is_timeout = True
                 self.retry = 3
                 self.exception = socket.timeout
+                raise socket.timeout
 
         except Exception as e:
             self.exception = e
