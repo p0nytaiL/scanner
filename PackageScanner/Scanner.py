@@ -61,7 +61,7 @@ class Scanner_v1:
         for outputFormatter in self._outputFormatters:
                 r = outputFormatter.printResult(finished_job)
 
-        print '\r', str(self._jobQueue._progress.progress()), '%',
+        print '\r', str(self._jobQueue._progress.progress()), '%',finished_job.description,
         sys.stdout.flush()
         return r
 

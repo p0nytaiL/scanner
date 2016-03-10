@@ -9,6 +9,7 @@ class HTTPHeaderJob(Job):
         Job.__init__(self, id)
         self.hostname = hostname
         self.port = port
+        self.description = '%s:%d'%(hostname, port)
 
     def do(self):
         self.result = dict.fromkeys(['response_head','error_head',

@@ -108,7 +108,7 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
         #body content
         self._fileHandle.write('<td>')
         if job.result['error_body'] is not None:
-            self._fileHandle.write(job.result['error_body'])
+            self._fileHandle.write(str(job.result['error_body']))
         else:
             self._fileHandle.write('%s' % (job.result['response_body']['title']))
         self._fileHandle.write('</td>')
@@ -116,7 +116,7 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
         #head
         self._fileHandle.write('<td>')
         if job.result['error_head'] is not None:
-            self._fileHandle.write(job.result['error_head'])
+            self._fileHandle.write(str(job.result['error_head']))
         else:
             self._fileHandle.write('status %s<br/>' % (job.result['response_head']['status']))
             self.printFilterHeader(job.result['response_head']['headers'])
@@ -125,7 +125,7 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
         #option
         self._fileHandle.write('<td>')
         if job.result['error_options'] is not None:
-            self._fileHandle.write(job.result['error_options'])
+            self._fileHandle.write(str(job.result['error_options']))
         else:
             self._fileHandle.write('status %s<br/>' % (job.result['response_options']['status']))
             self.printFilterHeader(job.result['response_options']['headers'])
@@ -134,7 +134,7 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
         #robots
         self._fileHandle.write('<td>')
         if job.result['error_robots'] is not None:
-            self._fileHandle.write(job.result['error_robots'])
+            self._fileHandle.write(str(job.result['error_robots']))
         else:
             self._fileHandle.write(job.result['response_robots']['body'].replace('\n','<br/>'))
         self._fileHandle.write('</td>')

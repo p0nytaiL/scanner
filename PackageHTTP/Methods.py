@@ -222,7 +222,7 @@ class HTTPMethodGETRobots(HTTPMethodGET):
         pass
     '''
 '''
-尝试获取title与h1
+尝试获取title,h1,h2
 '''
 class HTTPMethodGETPage(HTTPMethodGET):
     def __init__(self):
@@ -239,19 +239,17 @@ class HTTPMethodGETPage(HTTPMethodGET):
                 body = HTTPBodyResponse()
                 unicode_body = body.decodeBody(resp['headers'], resp['body'])
                 dom_body = html.fromstring(unicode_body)
-                title = dom_body.xpath('//title')
-                if len(title) > 0:
-                    title = title[0].text
-                    if title != None:
-                        result['title'] = title.encode('utf-8')
-                        result['title'] = result['title'].strip()
-                elif len(title) == 0:
-                    title = dom_body.xpath('//h1')
+                title_tags = ['title','h1','h2']
+                for tag in title_tags:
+                    title = dom_body.xpath('//'+tag)
                     if len(title) > 0:
                         title = title[0].text
                         if title != None:
                             result['title'] = title.encode('utf-8')
                             result['title'] = result['title'].strip()
+
+                    if len(result['title']) != 0:break
+
             #
             except Exception as e:
                 error = 'parse title error'

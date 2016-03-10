@@ -136,6 +136,7 @@ class CheckHostJob(Job):
         #self.nameservers = nameservers
         self.queue_nameservers = queue_nameservers
         self.current_nameserver = None
+        self.description = hostname
 
     '''
         从8.8.8.8获取某域名的ns记录,可能存在遗漏

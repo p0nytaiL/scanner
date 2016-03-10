@@ -150,6 +150,9 @@ class JobQueue_v1:
     #对于爆破类型的扫描,该标示用于终止扫描
     self.is_last_job
 
+    #进度汇报时的描述性字符串
+    self.description
+
 为了便于框架调用获取完整的job信息,do方法中的返回值为self
 所有继承job的实现,都必须在do方法中返回self
 '''
@@ -161,6 +164,7 @@ class Job:
         self.is_timeout = False
         self.result = None
         self.is_last_job = False
+        self.description = ''
         self.exception = None
 
     #job中的异常最好由job自己处理
