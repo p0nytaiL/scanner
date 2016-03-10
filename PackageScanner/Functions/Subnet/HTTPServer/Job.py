@@ -41,6 +41,7 @@ class HTTPHeaderJob(Job):
         except socket.timeout as e1:
             self.is_timeout = True
             self.retry = 3
+            self.exception = e1
 
         except Exception as e:
             self.exception = e

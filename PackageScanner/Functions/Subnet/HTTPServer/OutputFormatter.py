@@ -16,6 +16,7 @@ class OutputFormatterConsoleHTTPServer(OutputFormatterConsole):
     #Print Title
     def printResult(self, result):
         if result.exception != None:
+            #print '\r%s:%d\t'%(result.hostname, result.port), result.exception
             return None
         try:
             print '\r%s:%d\t%85s'%(result.hostname, result.port, result.result['response_body']['title'])

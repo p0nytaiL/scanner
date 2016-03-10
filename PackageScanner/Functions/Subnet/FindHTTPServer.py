@@ -6,6 +6,10 @@ from PackageScanner.Functions.Subnet.HTTPServer.OutputFormatter import *
 from PackageScanner.Functions.Subnet.HTTPServer.Job import HTTPHeaderJob
 from PackageScanner.Scanner import Scanner_v1
 
+'''
+导致Scanner Result Summary中timeout数量与实际扫描出的结果数量和与总任务数不匹配的原因
+扫描失败后,timeout类型记录进timeout队列,[Errno 61] Connection refused 没有记录进timeout队列
+'''
 
 class FindHTTPServer(Scanner_v1):
     def __init__(self, ports):
@@ -27,9 +31,9 @@ class FindHTTPServer(Scanner_v1):
 if __name__ == '__main__':
     import socket
     socket.setdefaulttimeout(3)
-    s = FindHTTPServer(ports=[80,81,82,83,8000,8001,8002,8003,8080,8088])
+    s = FindHTTPServer(ports=[80])
     import netaddr
-    net = netaddr.IPNetwork('118.193.216.0/24')
+    net = netaddr.IPNetwork('192.168.1.1/24')
     s._description = str(net.network)
     s.scan(targets=net, thread_count= 32)
     for r in s:

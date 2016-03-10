@@ -28,8 +28,7 @@ class Progress:
         self._index = 0
         self._total = 0
 
-    def progress(self, index = 1):
-        self._index = self._index + index
+    def progress(self):
         return '%.2f' % ((float(self._index)/ float(self._total)) *100)
 
     def __str__(self):
@@ -100,10 +99,10 @@ class JobQueue_v1:
                 if finished_job.is_timeout and (finished_job.retry == finished_job.max_retry):
                     #print "无效任务"
                     self._queueTimeoutJobs.put(finished_job)
-                    self._progress._total = self._progress._total - 1
-                    continue
+                    #continue
 
                 #无超时,加入结果队列
+                self._progress._index = self._progress._index + 1
                 self._queueFinishedJobs.put(finished_job)
 
             except Queue.Empty as e:
