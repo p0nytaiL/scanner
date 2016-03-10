@@ -89,9 +89,6 @@ class HTTPMethod:
             raise Exception('Connection closed by foreign host.')
 
         # 54 Connection reset by peer
-        except socket.error as e3:
-            raise e3
-
         except Exception as e:
             error = e
 

@@ -53,13 +53,16 @@ class HTTPBody:
             search_text = match_text.group(1)
         return search_text
 
+    '''
+    优先获取页面中的编码类型
+    '''
     def getContentType(self,header, body):
-        if header != None and header.get('content-type') != None:
-            #Content-Type	text/html; charset=utf-8
-            content_type = self.searchPattern(re.compile('charset=([-\w\d]+)',re.I), header.get('content-type'))
-        else:
-            #<meta http-equiv="Content-Type" content="text/html; charset=big5">
-            content_type = self.searchPattern(re.compile('<meta.+?charset=([-\w\d]+)',re.I), body)
+        #<meta http-equiv="Content-Type" content="text/html; charset=big5">
+        content_type = self.searchPattern(re.compile('<meta.+?charset=([-\w\d]+)',re.I), body)
+        if content_type == None or len(content_type) == 0:
+            if header != None and header.get('content-type') != None:
+                #Content-Type	text/html; charset=utf-8
+                content_type = self.searchPattern(re.compile('charset=([-\w\d]+)',re.I), header.get('content-type'))
 
         if content_type == '' or content_type == None:
             content_type = 'utf-8'
