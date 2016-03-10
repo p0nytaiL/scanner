@@ -34,14 +34,14 @@ class OutputFormatterConsoleSubdomain(OutputFormatterConsole):
         return None
 
     def printHeader(self, description):
-        print "==============="
+        print "========================"
         print " subdomain of %s" % (description)
-        print "==============="
+        print "========================"
         pass
 
     def printFooter(self, description):
         if len(ip_collection._ip_networks) != 0:
-            print '\r\nIP Address Range Summary:'
+            print '\rIP Address Range Summary:'
             for subnet in ip_collection.getSubnets():
                 print subnet
 
@@ -51,6 +51,7 @@ class OutputFormatterFileSubdmamin(OutputFormatterFile):
         OutputFormatterFile.__init__(self)
 
     def printHeader(self, description):
+        self._fileName = description + '.html'
         OutputFormatterFile.printHeader(self, description)
         self._fileHandle.write('<html><header>')
         self._fileHandle.write('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">')

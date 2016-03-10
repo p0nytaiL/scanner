@@ -234,7 +234,7 @@ class HTTPMethodGETPage(HTTPMethodGET):
         result = {
             'title':''
         }
-        if error == None:
+        if error == None and len(resp['body']) != 0:
             try:
                 body = HTTPBodyResponse()
                 unicode_body = body.decodeBody(resp['headers'], resp['body'])

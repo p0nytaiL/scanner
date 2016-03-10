@@ -9,9 +9,9 @@ class OutputFormatterConsoleHTTPServer(OutputFormatterConsole):
         pass
 
     def printHeader(self, description):
-        print '--------------------------------------------------------------------------------------------------------------------------'
-        print '%15s     %85s       '%('IP', 'Title')
-        print '--------------------------------------------------------------------------------------------------------------------------'
+        print '---------------------------------------------------------------------------------------------------------'
+        print '%15s%040s'%('HOST', 'TITLE')
+        print '---------------------------------------------------------------------------------------------------------'
 
     #Print Title
     def printResult(self, result):
@@ -19,14 +19,14 @@ class OutputFormatterConsoleHTTPServer(OutputFormatterConsole):
             #print '\r%s:%d\t'%(result.hostname, result.port), result.exception
             return None
         try:
-            print '\r%s:%d\t%85s'%(result.hostname, result.port, result.result['response_body']['title'])
+            print '\r',('%s:%d' % (result.hostname,result.port)),('%80s'%(result.result['response_body']['title']))
         except:
             print result.hostname, result.port
 
     def printFooter(self, description):
-        print '\r--------------------------------------------------------------------------------------------------------------------------'
-        print '%15s     %85s'%('IP', 'Title')
-        print '--------------------------------------------------------------------------------------------------------------------------'
+        print '---------------------------------------------------------------------------------------------------------'
+        print '%15s%040s'%('HOST', 'TITLE')
+        print '---------------------------------------------------------------------------------------------------------'
 
 
 class OutputFormatterFileHTTPServer(OutputFormatterFile):

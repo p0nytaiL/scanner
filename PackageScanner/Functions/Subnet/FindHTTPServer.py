@@ -37,6 +37,6 @@ if __name__ == '__main__':
     import netaddr
     net = netaddr.IPNetwork('127.0.0.1')
     s._description = str(net.network)
-    s.scan(targets=net, thread_count= 32)
+    s.scan(targets=net, thread_count= 1)
     for r in s:
         pass

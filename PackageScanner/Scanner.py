@@ -56,6 +56,7 @@ class Scanner_v1:
             print '\t','timeout %d jobs' % (self._jobQueue._queueTimeoutJobs.qsize())
             raise StopIteration
 
+        print '\r',' '*30,
         #返回可用于下阶段扫描的结果
         r = None
         for outputFormatter in self._outputFormatters:
