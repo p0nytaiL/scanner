@@ -210,10 +210,19 @@ class HTTPMethodGETRobots(HTTPMethodGET):
 
     def getResponse(self):
         resp, error = HTTPMethodGET.getResponse(self)
-        if resp['status'] != 200:
-            resp['body'] = ''
-        elif 0 <= resp['body'].find('<html>'):
-            resp['body']='Non-Standard Robots.txt'
+
+        if error == None and len(resp['body']) != 0:
+            try:
+                body = HTTPBodyResponse()
+                unicode_body = body.decodeBody(resp['headers'], resp['body'])
+                if resp['status'] != 200:
+                    resp['body'] = ''
+                elif 0 <= unicode_body.find('<html>'):
+                    resp['body']='Non-Standard Robots.txt'
+                else:
+                    resp['body'] = unicode_body
+            except Exception as e:
+                error = e
 
         return resp, error
 
@@ -238,17 +247,18 @@ class HTTPMethodGETPage(HTTPMethodGET):
             try:
                 body = HTTPBodyResponse()
                 unicode_body = body.decodeBody(resp['headers'], resp['body'])
-                dom_body = html.fromstring(unicode_body)
-                title_tags = ['title','h1','h2']
-                for tag in title_tags:
-                    title = dom_body.xpath('//'+tag)
-                    if len(title) > 0:
-                        title = title[0].text
-                        if title != None:
-                            result['title'] = title.encode('utf-8')
-                            result['title'] = result['title'].strip()
+                if len(unicode_body) != 0:
+                    dom_body = html.fromstring(unicode_body)
+                    title_tags = ['title','h1','h2']
+                    for tag in title_tags:
+                        title = dom_body.xpath('//'+tag)
+                        if len(title) > 0:
+                            title = title[0].text
+                            if title != None:
+                                result['title'] = title.encode('utf-8')
+                                result['title'] = result['title'].strip()
 
-                    if len(result['title']) != 0:break
+                        if len(result['title']) != 0:break
 
             #
             except Exception as e:

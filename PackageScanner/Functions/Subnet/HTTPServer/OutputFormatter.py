@@ -24,7 +24,7 @@ class OutputFormatterConsoleHTTPServer(OutputFormatterConsole):
             print result.hostname, result.port
 
     def printFooter(self, description):
-        print '---------------------------------------------------------------------------------------------------------'
+        print '\r---------------------------------------------------------------------------------------------------------'
         print '%15s%040s'%('HOST', 'TITLE')
         print '---------------------------------------------------------------------------------------------------------'
 
@@ -56,7 +56,7 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
             self._fileHandle.write(header_name + ': ' + header_value +'<br/>')
 
     def printHeader(self, description):
-        self._fileName = description + '.html'
+        self._fileExt = '.html'
         OutputFormatterFile.printHeader(self, description)
         if self._fileHandle != None:
             self._fileHandle.write('<html><head>' \

@@ -51,7 +51,7 @@ class OutputFormatterFileSubdmamin(OutputFormatterFile):
         OutputFormatterFile.__init__(self)
 
     def printHeader(self, description):
-        self._fileName = description + '.html'
+        self._fileExt = '.html'
         OutputFormatterFile.printHeader(self, description)
         self._fileHandle.write('<html><header>')
         self._fileHandle.write('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">')
