@@ -232,6 +232,7 @@ class HTTPMethodGETRobots(HTTPMethodGET):
     '''
 '''
 尝试获取title,h1,h2
+对于包含<?xml version='1.0' encoding='xxx'?>的页面,不需要解析成unicode
 '''
 class HTTPMethodGETPage(HTTPMethodGET):
     def __init__(self):
@@ -245,10 +246,18 @@ class HTTPMethodGETPage(HTTPMethodGET):
         }
         if error == None and len(resp['body']) != 0:
             try:
-                body = HTTPBodyResponse()
-                unicode_body = body.decodeBody(resp['headers'], resp['body'])
-                if len(unicode_body) != 0:
-                    dom_body = html.fromstring(unicode_body)
+                body = None
+                dom_body = None
+                if resp['body'].find('<?xml') == 0:
+                    body = resp['body']
+                else:
+                    body = HTTPBodyResponse()
+                    body = body.decodeBody(resp['headers'], resp['body'])
+
+                if body != None:
+                    dom_body = html.fromstring(body)
+
+                if dom_body != None:
                     title_tags = ['title','h1','h2']
                     for tag in title_tags:
                         title = dom_body.xpath('//'+tag)
