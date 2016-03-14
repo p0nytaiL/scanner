@@ -8,6 +8,7 @@ import optparse
 import netaddr
 from PackageScanner.Functions.Subnet.FindHTTPServer import FindHTTPServer
 from PackageScanner.Functions.DNS.Domain_v1 import FindSubDomain
+from PackageScanner.Functions.DNS.TargetDomain import FindTargetSubDomain
 
 def process_command_line(argv):
     if argv is None:
@@ -79,6 +80,10 @@ def main(argv=None):
         scanner = FindSubDomain()
         scanner._description = settings.target
         scanner._directory_name = settings.dictionary
+        target = settings.target
+
+    elif function == 'targetsubdomain':
+        scanner = FindTargetSubDomain()
         target = settings.target
 
     elif function == 'domainservers':

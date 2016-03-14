@@ -82,7 +82,8 @@ class HTTPBody:
             decompressed_body = self.decompressBody(header, body)
             content_type = self.getContentType(header, decompressed_body)
 
-            default_content_type=['gb2312','gbk','big5']
+            default_content_type=['utf-8','shift_jis','gb2312','gbk','big5']
+            #default_content_type=[]
             default_content_type.insert(0, content_type)
             for content_type in default_content_type:
                 try:
@@ -90,6 +91,8 @@ class HTTPBody:
                     self.content_type = content_type
                     break
                 except UnicodeDecodeError as e:
+                    continue
+                except LookupError as e:
                     continue
 
         except Exception as e:
