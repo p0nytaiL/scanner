@@ -32,7 +32,7 @@ class TargetDomainJob(Job):
         for r in self._scanner:
             pass
 
-        return Job.do()
+        return Job.do(self)
 
 class FindTargetSubDomain(Scanner_v1):
     def __init__(self):
