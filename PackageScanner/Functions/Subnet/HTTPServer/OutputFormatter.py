@@ -145,7 +145,6 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
             if job.result['error_robots'] is not None:
                 self._fileHandle.write(str(job.result['error_robots']))
             else:
-                print job.result['response_robots']['body']
                 self._fileHandle.write(job.result['response_robots']['body'].replace('\n','<br/>'))
         except Exception as e:
             self._fileHandle.write(str(e))
