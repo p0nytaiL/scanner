@@ -107,36 +107,49 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
 
         #body content
         self._fileHandle.write('<td>')
-        if job.result['error_body'] is not None:
-            self._fileHandle.write(str(job.result['error_body']))
-        else:
-            self._fileHandle.write('%s' % (job.result['response_body']['title']))
-        self._fileHandle.write('</td>')
-
+        try:
+            if job.result['error_body'] is not None:
+                self._fileHandle.write(str(job.result['error_body']))
+            else:
+                self._fileHandle.write('%s' % (job.result['response_body']['title']))
+            self._fileHandle.write('</td>')
+        except Exception as e:
+            self._fileHandle.write(str(e))
         #head
         self._fileHandle.write('<td>')
-        if job.result['error_head'] is not None:
-            self._fileHandle.write(str(job.result['error_head']))
-        else:
-            self._fileHandle.write('status %s<br/>' % (job.result['response_head']['status']))
-            self.printFilterHeader(job.result['response_head']['headers'])
+        try:
+            if job.result['error_head'] is not None:
+                self._fileHandle.write(str(job.result['error_head']))
+            else:
+                self._fileHandle.write('status %s<br/>' % (job.result['response_head']['status']))
+                self.printFilterHeader(job.result['response_head']['headers'])
+        except Exception as e:
+            self._fileHandle.write(str(e))
         self._fileHandle.write('</td>')
 
         #option
         self._fileHandle.write('<td>')
-        if job.result['error_options'] is not None:
-            self._fileHandle.write(str(job.result['error_options']))
-        else:
-            self._fileHandle.write('status %s<br/>' % (job.result['response_options']['status']))
-            self.printFilterHeader(job.result['response_options']['headers'])
+        try:
+            if job.result['error_options'] is not None:
+                self._fileHandle.write(str(job.result['error_options']))
+            else:
+                self._fileHandle.write('status %s<br/>' % (job.result['response_options']['status']))
+                self.printFilterHeader(job.result['response_options']['headers'])
+        except Exception as e:
+            self._fileHandle.write(str(e))
         self._fileHandle.write('</td>')
 
         #robots
         self._fileHandle.write('<td>')
-        if job.result['error_robots'] is not None:
-            self._fileHandle.write(str(job.result['error_robots']))
-        else:
-            self._fileHandle.write(job.result['response_robots']['body'].replace('\n','<br/>'))
+        try:
+            if job.result['error_robots'] is not None:
+                self._fileHandle.write(str(job.result['error_robots']))
+            else:
+                print job.result['response_robots']['body']
+                self._fileHandle.write(job.result['response_robots']['body'].replace('\n','<br/>'))
+        except Exception as e:
+            self._fileHandle.write(str(e))
+
         self._fileHandle.write('</td>')
         self._fileHandle.write('</tr>')
 
