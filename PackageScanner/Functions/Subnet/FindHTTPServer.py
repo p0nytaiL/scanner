@@ -3,7 +3,7 @@
 
 
 from PackageScanner.Functions.Subnet.HTTPServer.OutputFormatter import *
-from PackageScanner.Functions.Subnet.HTTPServer.Job import HTTPHeaderJob
+from PackageScanner.Functions.Subnet.HTTPServer.Job import HTTPHeaderJob, HTTPServerJob
 from PackageScanner.Scanner import Scanner_v1
 
 
@@ -52,15 +52,16 @@ class FindHTTPServer(Scanner_v1):
         if len(ports) == 0:
             ports = vul_ports
         self._ports = ports
-        self._outputFormatters.append(OutputFormatterConsoleHTTPServer())
-        self._outputFormatters.append(OutputFormatterFileHTTPServer())
+        self._outputFormatters.append(OutputFormatterConsoleHTTPServer1())
+        self._outputFormatters.append(OutputFormatterFileHTTPServer1())
 
     def createJobs(self,targets):
         for index1, port in enumerate(self._ports):
             for index2, ip in enumerate(targets):
                 if targets.size > 1 and ip in [targets.network, targets.broadcast]:
                     continue
-                self._jobQueue.addJob(HTTPHeaderJob(((index1) * len(targets))+(index2+1), str(ip), port))
+                #self._jobQueue.addJob(HTTPHeaderJob(((index1) * len(targets))+(index2+1), str(ip), port))
+                self._jobQueue.addJob(HTTPServerJob(((index1) * len(targets))+(index2+1), str(ip), port))
 
         return len(self._ports) * len(targets)
 
@@ -68,12 +69,11 @@ class FindHTTPServer(Scanner_v1):
 if __name__ == '__main__':
     import socket
     socket.setdefaulttimeout(3)
-    target_ports = [80,81,82,83,84,85,86,87,88,89,90,311,383,443,591,593,631,901,1220,1414,1741,1830,2301,2381,2809,3037,3057,3128,3443,3702,4343,4848,5250,6080,6988,7000,7001,7007,7144,7145,7510,7777,7779,8000,8008,8014,8028,8080,8085,8088,8090,8118,8123,8180,8181,8222,8243,8280,8300,8500,8800,8888,8899,9000,9060,9080,9090,9091,9443,9999,10000,11371,34443,34444,41080,50000,50002,55555]
-    target_ports = [80]
-    s = FindHTTPServer(ports=target_ports)
+    vul_ports = [80]
+    s = FindHTTPServer(ports=vul_ports)
     import netaddr
-    net = netaddr.IPNetwork('127.0.0.1')
+    net = netaddr.IPNetwork('121.40.55.0/24')
     s._description = str(net.network)
-    s.scan(targets=net, thread_count= 1)
+    s.scan(targets=net, thread_count= 32)
     for r in s:
         pass

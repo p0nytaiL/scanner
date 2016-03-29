@@ -18,11 +18,16 @@ DEFAULT_BODY_ENCODING = sys.getdefaultencoding()
 使用lxml前注意事项：先确保html经过了utf-8解码，即code = html.decode('utf-8', 'ignore')，否则会出现解析出错情况。
 因为中文被编码成utf-8之后变成 '/u2541'　之类的形式，lxml一遇到　“/”就会认为其标签结束。
 将页面解码为unicode，再传递给lxml.html.fromstring使用
+
+
+requests 中已包含完整的压缩,编码处理
+这部分代码留着备用
 '''
 
 class HTTPBody:
     def __init__(self):
         self.content_type = ''
+        self.excetion = None
 
     '''
         RFC 1950 (zlib compressed format)
@@ -108,8 +113,45 @@ class HTTPBodyRequest(HTTPBody):
 
 
 class HTTPBodyResponse(HTTPBody):
-    def __init__(self):
+    def __init__(self, body, encoding):
         HTTPBody.__init__(self)
+        self.body = body
+        self.encoding = encoding
+        self.dom_body = None
+
+    def _parse(self):
+        if self.dom_body != None:
+            return
+        try:
+            self.dom_body = html.fromstring(self.body.decode(self.encoding))
+        except Exception as e:
+            self.excetion = e
+
+    @property
+    def title(self):
+        self._parse()
+
+        title = ''
+        try:
+            if self.dom_body != None:
+                title_tags = ['title','h1','h2']
+                for tag in title_tags:
+                    node_title = self.dom_body.xpath('//'+tag)
+                    if len(node_title) > 0:
+                        text_title = node_title[0].text
+                        if text_title != None:
+                            title = text_title.encode(self.encoding)
+                            title = title.strip()
+
+                    if len(title) != 0:break
+
+        except Exception as e:
+            self.exception = e
+
+        return title
+
+
+
 
 
 

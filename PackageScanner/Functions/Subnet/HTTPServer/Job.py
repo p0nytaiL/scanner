@@ -65,3 +65,58 @@ class HTTPHeaderJob(Job):
             self.exception = e
 
         return Job.do(self)
+
+import requests
+
+class HTTPServerJob(Job):
+    def __init__(self, id, hostname, port = 80, timeout = 5):
+        Job.__init__(self, id)
+        self.timeout = timeout
+        self.hostname = hostname
+        self.port = port
+        self.scheme = 'http'
+        if self.port in [443]:
+            self.scheme = 'https'
+        self.description = '%s:%d'%(hostname, port)
+
+    #优化为一个Session
+    def do(self):
+        try:
+            uri_root = urlparse.urlunsplit((self.scheme,self.description, '/','',''))
+            headers = {'User-Agent':getRandomAgent()}
+            self.result = {
+                #'response_head' : requests.Request('HEAD', uri_root ,headers=headers),
+                #'response_robots' : requests.Request('GET', uri_root ,headers=headers),
+                'response_get' : requests.Request('GET', uri_root ,headers=headers),
+                'response_options' : requests.Request('OPTIONS', uri_root ,headers=headers)
+            }
+
+            http_session = requests.Session()
+
+            for k, v in self.result.items():
+                request = http_session.prepare_request(v)
+                try:
+                    self.result[k] = http_session.send(request, timeout = self.timeout)
+                except Exception as e:
+                    self.result[k] = e
+
+            #超时,连接重置判定
+            cnt_exception = 0
+            for k, v in self.result.items():
+                if not isinstance(v, requests.Response):
+                    cnt_exception = cnt_exception + 1
+
+            if cnt_exception == len(self.result):
+                self.is_timeout = True
+                self.retry = 3
+                raise Exception('time out or connection reset')
+
+        except Exception as e:
+            self.exception = e
+
+        return Job.do(self)
+
+if __name__ == '__main__':
+    job = HTTPServerJob(id=1, hostname='121.40.55.211')
+    job.do()
+    print job.result

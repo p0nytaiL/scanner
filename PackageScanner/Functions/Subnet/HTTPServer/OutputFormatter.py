@@ -14,14 +14,14 @@ class OutputFormatterConsoleHTTPServer(OutputFormatterConsole):
         print '---------------------------------------------------------------------------------------------------------'
 
     #Print Title
-    def printResult(self, result):
-        if result.exception != None:
+    def printResult(self, job):
+        if job.exception != None:
             #print '\r%s:%d\t'%(result.hostname, result.port), result.exception
             return None
         try:
-            print '\r',('%s:%d' % (result.hostname,result.port)),('%80s'%(result.result['response_body']['title']))
+            print '\r',('%s:%d' % (job.hostname,job.port)),('%80s'%(job.result['response_body']['title']))
         except:
-            print result.hostname, result.port
+            print job.hostname, job.port
 
     def printFooter(self, description):
         print '\r---------------------------------------------------------------------------------------------------------'
@@ -49,10 +49,14 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
             'last-modified',
             'expires',
             'pragma',
-            'cache-control'
+            'cache-control',
+            'set-cookie',
+            'vary',
+            'content-encoding',
+            'content-language',
         ]
         for header_name, header_value in headers.items():
-            if header_name in filter:   continue
+            if header_name.lower() in filter:   continue
             self._fileHandle.write(header_name + ': ' + header_value +'<br/>')
 
     def printHeader(self, description):
@@ -159,3 +163,129 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
             self._fileHandle.write('</table></html>')
         OutputFormatterFile.printFooter(self, description)
 
+
+import requests
+from PackageHTTP.Body import HTTPBodyResponse
+
+class OutputFormatterConsoleHTTPServer1(OutputFormatterConsoleHTTPServer):
+    def __init__(self):
+        OutputFormatterConsoleHTTPServer.__init__(self)
+
+    def printResult(self, job):
+        response = job.result['response_get']
+        print '\r',job.description,
+        if isinstance(response,requests.Response):
+            body = HTTPBodyResponse(response.content, response.encoding)
+            print '\t'*8, body.title
+
+
+class OutputFormatterFileHTTPServer1(OutputFormatterFileHTTPServer):
+    def __init__(self):
+        OutputFormatterFileHTTPServer.__init__(self)
+
+    def printHeader(self, description):
+        self._fileExt = '.html'
+        OutputFormatterFile.printHeader(self, description)
+        if self._fileHandle != None:
+            self._fileHandle.write('<html><head>' \
+              '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">' \
+              '<style type="text/css">' \
+              'table {' \
+              'width: 100%;' \
+              'table-layout: fixed;' \
+              'word-wrap: break-word;' \
+              '}' \
+              '</style>' \
+              '</head>' \
+              '<table border frame=box>' \
+              '<tr>' \
+              '<td style="width: 3%;">' \
+              'id' \
+              '</td>' \
+              '<td style="width: 17%;">' \
+              'host' \
+              '</td>' \
+              '<td style="width: 20%;">' \
+              'title' \
+              '</td>' \
+              '<td style="width: 30%;">' \
+              'informations' \
+              '</td>' \
+              '<td style="width: 25%;">' \
+              'OPTIONS'\
+              '</td>' \
+              '<td style="width: 5%;">' \
+              'history' \
+              '</td>' \
+              '</tr>')
+
+
+    def printResult(self,job):
+        if job.exception is not None:
+            self._fileHandle.write('<!-- %s:%d %s-->' %(job.hostname, job.port, job.exception))
+            return False
+
+        self._fileHandle.write('<tr>')
+
+        while True:
+            #id
+            self._fileHandle.write('<td>')
+            self._fileHandle.write(str(self._index))
+            self._fileHandle.write('</td>')
+            self._index = self._index + 1
+
+            #host
+            self._fileHandle.write('<td>')
+            url = 'http://%s:%d' % (job.hostname, job.port)
+            self._fileHandle.write('<a href=%s>%s</a>' % (url, url))
+            self._fileHandle.write('</td>')
+
+            #title
+            response_curr = job.result['response_get']
+            self._fileHandle.write('<td>')
+            try:
+                body = HTTPBodyResponse(response_curr.content, response_curr.encoding)
+                self._fileHandle.write(body.title)
+            except Exception as e:
+                self._fileHandle.write(str(e))
+            self._fileHandle.write('</td>')
+
+            #information: server, cookies...
+            response_curr = job.result['response_get']
+            self._fileHandle.write('<td>')
+            try:
+                self.printFilterHeader(response_curr.headers)
+
+                if len(response_curr.cookies):
+                    self._fileHandle.write('<br/>Cookies:<br/>')
+                    for name, value in response_curr.cookies.items():
+                        self._fileHandle.write('%s : %s<br/>' % (name, value))
+
+            except Exception as e:
+                self._fileHandle.write(str(e))
+            self._fileHandle.write('</td>')
+
+            #option
+            response_curr = job.result['response_options']
+            self._fileHandle.write('<td>')
+            try:
+                self.printFilterHeader(response_curr.headers)
+            except Exception as e:
+                self._fileHandle.write(str(e))
+            self._fileHandle.write('</td>')
+
+            #history
+            response_curr = job.result['response_get']
+            self._fileHandle.write('<td>')
+            try:
+                for response in response_curr.history:
+                    self._fileHandle.write('%s<br/>'%(response.status_code))
+            except Exception as e:
+                self._fileHandle.write(str(e))
+            self._fileHandle.write('</td>')
+
+            break
+
+        self._fileHandle.write('</tr>')
+
+        return False
