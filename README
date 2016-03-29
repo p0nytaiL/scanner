@@ -3,6 +3,7 @@ python2.7
 
 pip install lxml
 pip install netaddr
+pip install requests
 
 ./S.py -f findsubdomain -t github.com
 ./S.py -f findhttpserver -t 192.168.1.0/24
