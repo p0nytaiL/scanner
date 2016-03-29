@@ -54,6 +54,7 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
             'vary',
             'content-encoding',
             'content-language',
+            'keep-alive'
         ]
         for header_name, header_value in headers.items():
             if header_name.lower() in filter:   continue
@@ -173,10 +174,10 @@ class OutputFormatterConsoleHTTPServer1(OutputFormatterConsoleHTTPServer):
 
     def printResult(self, job):
         response = job.result['response_get']
-        print '\r',job.description,
+
         if isinstance(response,requests.Response):
-            body = HTTPBodyResponse(response.content, response.encoding)
-            print '\t'*8, body.title
+            body = HTTPBodyResponse(response.content, response.apparent_encoding)
+            print  '\r',job.description, '\t'*6, body.title
 
 
 class OutputFormatterFileHTTPServer1(OutputFormatterFileHTTPServer):
@@ -244,8 +245,9 @@ class OutputFormatterFileHTTPServer1(OutputFormatterFileHTTPServer):
             response_curr = job.result['response_get']
             self._fileHandle.write('<td>')
             try:
-                body = HTTPBodyResponse(response_curr.content, response_curr.encoding)
+                body = HTTPBodyResponse(response_curr.content, response_curr.apparent_encoding)
                 self._fileHandle.write(body.title)
+                #pass
             except Exception as e:
                 self._fileHandle.write(str(e))
             self._fileHandle.write('</td>')
@@ -254,6 +256,7 @@ class OutputFormatterFileHTTPServer1(OutputFormatterFileHTTPServer):
             response_curr = job.result['response_get']
             self._fileHandle.write('<td>')
             try:
+                self._fileHandle.write('Status: %d<br/><br/>'%(response_curr.status_code))
                 self.printFilterHeader(response_curr.headers)
 
                 if len(response_curr.cookies):
@@ -269,6 +272,7 @@ class OutputFormatterFileHTTPServer1(OutputFormatterFileHTTPServer):
             response_curr = job.result['response_options']
             self._fileHandle.write('<td>')
             try:
+                self._fileHandle.write('Status: %d<br/><br/>'%(response_curr.status_code))
                 self.printFilterHeader(response_curr.headers)
             except Exception as e:
                 self._fileHandle.write(str(e))

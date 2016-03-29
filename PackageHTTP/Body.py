@@ -140,7 +140,7 @@ class HTTPBodyResponse(HTTPBody):
                     if len(node_title) > 0:
                         text_title = node_title[0].text
                         if text_title != None:
-                            title = text_title.encode(self.encoding)
+                            title = text_title.encode('utf-8')
                             title = title.strip()
 
                     if len(title) != 0:break

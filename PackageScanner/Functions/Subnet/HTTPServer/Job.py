@@ -67,6 +67,10 @@ class HTTPHeaderJob(Job):
         return Job.do(self)
 
 import requests
+from requests.packages.urllib3.exceptions import *
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(SNIMissingWarning)
+requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 
 class HTTPServerJob(Job):
     def __init__(self, id, hostname, port = 80, timeout = 5):
@@ -75,7 +79,7 @@ class HTTPServerJob(Job):
         self.hostname = hostname
         self.port = port
         self.scheme = 'http'
-        if self.port in [443]:
+        if self.port in [443, 8443, 9443]:
             self.scheme = 'https'
         self.description = '%s:%d'%(hostname, port)
 
@@ -96,7 +100,9 @@ class HTTPServerJob(Job):
             for k, v in self.result.items():
                 request = http_session.prepare_request(v)
                 try:
-                    self.result[k] = http_session.send(request, timeout = self.timeout)
+                    self.result[k] = http_session.send(request,
+                                                       timeout = self.timeout,
+                                                       verify = False)
                 except Exception as e:
                     self.result[k] = e
 

@@ -55,11 +55,10 @@ def process_command_line(argv):
 
     return settings, args
 
+global_timeout = 5
 
 def main(argv=None):
     settings, args = process_command_line(argv)
-    socket.setdefaulttimeout(3)
-
     scanner = None
     target = None
     function = settings.function
@@ -70,17 +69,19 @@ def main(argv=None):
             ports = settings.ports.split(',')
             for port in ports:
                 target_ports.append(int(port))
-        
-        scanner = FindHTTPServer(ports=target_ports)
+
+        scanner = FindHTTPServer(ports=target_ports, timeout= global_timeout)
         scanner._description = str(target.network)
 
     elif function == 'findsubdomain':
+        socket.setdefaulttimeout(global_timeout)
         scanner = FindSubDomain()
         scanner._description = settings.target
         scanner._directory_name = settings.dictionary
         target = settings.target
 
     elif function == 'targetsubdomain':
+        socket.setdefaulttimeout(global_timeout)
         scanner = FindTargetSubDomain()
         target = settings.target
 
@@ -93,10 +94,12 @@ def main(argv=None):
     else:
         print 'unsupport function: %s' % (settings.function)
         exit(-1)
+    import datetime
+    starttime = datetime.datetime.now()
     try:
-       count_jobs = scanner.scan(targets = target, thread_count= int(settings.threadcount))
-       for index,result in enumerate(scanner):
-           pass
+        count_jobs = scanner.scan(targets = target, thread_count= int(settings.threadcount))
+        for index,result in enumerate(scanner):
+            pass
 
     except KeyboardInterrupt as e1:
        print "\rFinishing pending requests..."
@@ -107,6 +110,9 @@ def main(argv=None):
         scanner.stop()
         print 'main' + e
 
+    #long running
+    endtime = datetime.datetime.now()
+    print 'Time consuming: ',(endtime - starttime).seconds,'s'
     return 0        # success
 
 
