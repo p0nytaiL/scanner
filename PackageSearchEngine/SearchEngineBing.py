@@ -1,8 +1,8 @@
+import requests
 import urllib,urlparse
 from lxml import html
 from PackageSearchEngine.SearchEngine import SearchEngine,PageParse
 from PackageHTTP.UserAgents import getRandomAgent
-import requests
 
 '''
     def CreateByPassCookie(self):
@@ -28,14 +28,14 @@ import requests
 class SearchEngineBing(SearchEngine):
     def __init__(self):
         SearchEngine.__init__(self)
+        self.hostname = 'www.bing.com'
 
     def CreateFirstSearchPageUrl(self):
         query_string={
             'q' : self.keyword,
             'count' : '50'
         }
-        #url = urlparse.ParseResult('http','link.aizhan.com','/','',urllib.urlencode(query_string),'')
-        url = urlparse.ParseResult('http','cn.bing.com','/search','',urllib.urlencode(query_string),'')
+        url = urlparse.ParseResult('https',self.hostname,'/search','',urllib.urlencode(query_string),'')
         return url.geturl()
 
     def GoNextPage(self, next_page_url):
@@ -44,7 +44,8 @@ class SearchEngineBing(SearchEngine):
 ; SRCHHPGUSR=CW=1280&CH=243&DPR=2; SRCHUID=V=2&GUID=A3398A472384489FB0BCECAA822C8EDE; MUIDB=2F2195A82AB36CD323ED9DC42B126D4B\
 ; HPSHRLAN=CLOSE=1; _SS=SID=0B472366C4E76A200A642BCAC5466BAB&HV=1454139963; _EDGE_S=mkt=zh-cn&SID=0B472366C4E76A200A642BCAC5466BAB\
 ; WLS=C=&N=; SNRHOP=TS=635897356787832176&I=1; SCRHDN=ASD=0&DURL=#',
-            'User-Agent':getRandomAgent()
+            'User-Agent':getRandomAgent(),
+            'X-Forwarded-For':'203.69.42.169'
         }
         response = requests.get(url=next_page_url, headers = headers)
         body = response.content
@@ -57,7 +58,7 @@ class SearchEngineBing(SearchEngine):
 
         for next_page_link in hrefs:
             next_page_url = next_page_link.attrib['href']
-            next_page_url = ('http://cn.bing.com' + next_page_url)
+            next_page_url = ('https://'+ self.hostname + next_page_url)
             return dom_body, body, next_page_url
 
 '''
@@ -80,6 +81,7 @@ class PageParseLinks(PageParse):
 if __name__ == '__main__':
     s = SearchEngineBing()
     s.pageParse = PageParseLinks()
-    s = s.AnalyzeResult("domain:github.com")
-    for domain in s:
-        print domain
+    for i in range(1,254):
+        results = s.AnalyzeResult(('ip:127.0.0.%d'% (i)))
+        for domain in results:
+            print domain

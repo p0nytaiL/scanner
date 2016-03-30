@@ -1,7 +1,11 @@
 #coding=utf-8
 
 __author__ = 'copy'
-import urllib
+import requests
+from requests.packages.urllib3.exceptions import *
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(SNIMissingWarning)
+requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 '''
 ponytail 2015-10-15
     SearchEngine 负责对页面进行遍历
@@ -40,7 +44,7 @@ class PageParse():
 class SearchEngine(object):
     def __init__(self):
         self.keyword = None
-        self.pageParse = PageParse()
+        self.page_parse = PageParse()
 
     def CreateFirstSearchPageUrl(self):
         pass
@@ -71,16 +75,16 @@ class SearchEngine(object):
             if next_page_url == None or next_page_url == '':
                 break
 
-        print '\r\nFinish (%d Pages)!\r\n' % (cnt_page)
+        print '\r\nFinish (%d Pages)!\r\n' % (len(pages))
         return dom_pages, pages
 
     def AnalyzeResult(self, keyword):
         result = []
         dom_pages, pages = self.Search(keyword)
 
-        if self.pageParse != None:
+        if self.page_parse != None:
             for i in xrange(0,len(pages)):
-                tmp = self.pageParse.ExtractResult(dom_pages[i], pages[i])
+                tmp = self.page_parse.ExtractResult(dom_pages[i], pages[i])
                 result.extend(tmp)
 
         #结果去重
