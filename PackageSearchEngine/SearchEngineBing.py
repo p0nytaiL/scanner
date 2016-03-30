@@ -4,10 +4,7 @@ from PackageSearchEngine.SearchEngine import SearchEngine,PageParse
 from PackageHTTP.UserAgents import getRandomAgent
 import requests
 
-class SearchEngineBing(SearchEngine):
-    def __init__(self):
-        SearchEngine.__init__(self)
-
+'''
     def CreateByPassCookie(self):
         # ------------- cookie ------------
         cookie_k1 = 'SRCHHPGUSR'
@@ -27,17 +24,12 @@ class SearchEngineBing(SearchEngine):
                                         cookie_k2, cookie_v2,
                                         cookie_k3, cookie_v3)
         return cookie
+'''
+class SearchEngineBing(SearchEngine):
+    def __init__(self):
+        SearchEngine.__init__(self)
 
     def CreateFirstSearchPageUrl(self):
-        '''
-               query_string['qs']='n'
-        query_string['go']='submit'
-        query_string['form']='QBLH'
-        query_string['sc']='0-7'
-        query_string['sp']='-1'
-        query_string['sk']=''
-        :return:
-        '''
         query_string={
             'q' : self.keyword,
             'count' : '50'
@@ -47,7 +39,6 @@ class SearchEngineBing(SearchEngine):
         return url.geturl()
 
     def GoNextPage(self, next_page_url):
-        print next_page_url
         headers ={
             'Cookie':'SRCHD=D=4157510&AF=NOFORM; SRCHUSR=AUTOREDIR=0&GEOVAR=&DOB=20151127; _EDGE_V=1; MUID=2F2195A82AB36CD323ED9DC42B126D4B\
 ; SRCHHPGUSR=CW=1280&CH=243&DPR=2; SRCHUID=V=2&GUID=A3398A472384489FB0BCECAA822C8EDE; MUIDB=2F2195A82AB36CD323ED9DC42B126D4B\
@@ -56,20 +47,6 @@ class SearchEngineBing(SearchEngine):
             'User-Agent':getRandomAgent()
         }
         response = requests.get(url=next_page_url, headers = headers)
-        '''
-        m = HTTPMethodGET()
-        m.setHostInfo(url = next_page_url)
-        m.setCookie('SRCHD=D=4157510&AF=NOFORM; SRCHUSR=AUTOREDIR=0&GEOVAR=&DOB=20151127; _EDGE_V=1; MUID=2F2195A82AB36CD323ED9DC42B126D4B\
-; SRCHHPGUSR=CW=1280&CH=243&DPR=2; SRCHUID=V=2&GUID=A3398A472384489FB0BCECAA822C8EDE; MUIDB=2F2195A82AB36CD323ED9DC42B126D4B\
-; HPSHRLAN=CLOSE=1; _SS=SID=0B472366C4E76A200A642BCAC5466BAB&HV=1454139963; _EDGE_S=mkt=zh-cn&SID=0B472366C4E76A200A642BCAC5466BAB\
-; WLS=C=&N=; SNRHOP=TS=635897356787832176&I=1; SCRHDN=ASD=0&DURL=#')
-        #m.setCookie(self.CreateByPassCookie())
-        response, error = m.getResponse()
-
-        body = HTTPBodyResponse()
-        body = body.decodeBody(response['headers'], response['body'])
-        #print body.encode('utf-8')
-        '''
         body = response.content
         dom_body = html.fromstring(body.decode(response.encoding))
 
@@ -104,4 +81,5 @@ if __name__ == '__main__':
     s = SearchEngineBing()
     s.pageParse = PageParseLinks()
     s = s.AnalyzeResult("domain:github.com")
-    print s
+    for domain in s:
+        print domain

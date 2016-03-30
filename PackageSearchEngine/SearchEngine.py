@@ -27,6 +27,7 @@ ponytail 2015-10-15
         results ＝ PageParse.ExtractResults(page, dom_pages)
 
 
+    同时返回page与dom_page的原因在于,在解析next页面的时候,已经将page处理成dom_page了,干脆一起返回
 '''
 class PageParse():
     def __init__(self):
@@ -61,11 +62,9 @@ class SearchEngine(object):
 
         cnt_page=0
         while True:
-            #print next_page_url
+            print next_page_url
             dom_page, page, next_page_url = self.GoNextPage(next_page_url)
             if dom_page != None:
-                #print '.',
-                cnt_page+=1
                 dom_pages.append(dom_page)
                 pages.append(page)
 
@@ -74,7 +73,6 @@ class SearchEngine(object):
 
         print '\r\nFinish (%d Pages)!\r\n' % (cnt_page)
         return dom_pages, pages
-
 
     def AnalyzeResult(self, keyword):
         result = []

@@ -237,7 +237,7 @@ class OutputFormatterFileHTTPServer1(OutputFormatterFileHTTPServer):
 
             #host
             self._fileHandle.write('<td>')
-            url = 'http://%s:%d' % (job.hostname, job.port)
+            url = '%s://%s:%d' % (job.scheme, job.hostname, job.port)
             self._fileHandle.write('<a href=%s>%s</a>' % (url, url))
             self._fileHandle.write('</td>')
 
