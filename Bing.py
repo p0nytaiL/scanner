@@ -23,6 +23,8 @@ def process_command_line(argv):
     parser.add_option("-d", "--domain", dest="domain",
                   help="domain", metavar="DOMAIN")
 
+    parser.add_option("-b", "--banner", dest="banner",
+                  help="banner", metavar="BANNER")
 
     settings, args = parser.parse_args(argv)
 
@@ -35,21 +37,11 @@ def process_command_line(argv):
 
 from PackageSearchEngine.SearchEngineBing import *
 
-def main(argv=None):
-    settings, args = process_command_line(argv)
+def printResult(results):
+    for i, r in enumerate(results):
+        print '[%03d] %s' % (i, r)
 
-    search_engine = SearchEngineBing()
-    search_engine.page_parse = PageParseLinks()
-    keywords = ''
-    if None != settings.ip:
-        keywords = 'ip:%s' % (settings.ip)
-    elif None != settings.domain:
-        keywords = 'domain:%s' % (settings.domain)
-    else:
-        pass
-
-    results = search_engine.AnalyzeResult(keywords)
-
+def printHTTPResult(results, keywords):
     try:
         scanner = FindHTTPServer1(ports=[80, 443])
         scanner._description = keywords
@@ -65,6 +57,29 @@ def main(argv=None):
     except Exception as e:
         scanner.stop()
         print 'main' + str(e)
+
+def main(argv=None):
+    settings, args = process_command_line(argv)
+
+    search_engine = SearchEngineBing()
+    search_engine.page_parse = PageParseLinks()
+    keywords = ''
+    description = ''
+    if None != settings.ip:
+        keywords = 'ip:%s' % (settings.ip)
+        description = settings.ip
+    elif None != settings.domain:
+        keywords = 'domain:%s' % (settings.domain)
+        description = settings.domain
+    else:
+        pass
+
+    results = search_engine.AnalyzeResult(keywords)
+
+    if None != settings.banner:
+        printHTTPResult(results, description)
+    else:
+        printResult(results)
 
 if __name__ == '__main__':
     main()
