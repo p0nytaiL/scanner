@@ -68,6 +68,22 @@ class FindHTTPServer(Scanner_v1):
 
         return len(self._ports) * len(targets)
 
+class FindHTTPServer1(Scanner_v1):
+    def __init__(self, ports = vul_ports, timeout = 5):
+        Scanner_v1.__init__(self)
+        if len(ports) == 0:
+            ports = vul_ports
+        self._ports = ports
+        self._timeout = timeout
+        self._outputFormatters.append(OutputFormatterConsoleHTTPServer1())
+        self._outputFormatters.append(OutputFormatterFileHTTPServer1())
+
+    def createJobs(self,targets):
+        for index1, port in enumerate(self._ports):
+            for index2, hostname in enumerate(targets):
+                self._jobQueue.addJob(HTTPServerJob(((index1) * len(targets))+(index2+1), hostname, port, self._timeout))
+
+        return len(self._ports) * len(targets)
 
 if __name__ == '__main__':
     vul_ports = [80,443]

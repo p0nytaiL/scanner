@@ -50,9 +50,17 @@ class FindSubDomain(Scanner_v1):
 
         return len(domain_prefixes)
 
+
+
+
+
 if __name__ == '__main__':
     s = FindSubDomain()
     s._directory_name = 'test'
     s.scan(targets='google.com', thread_count= 16)
+    valid_hostnames = []
     for r in s:
-        pass
+        if r != None:
+            valid_hostnames.append(r.hostname)
+
+    print valid_hostnames

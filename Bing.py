@@ -2,6 +2,7 @@
 #coding=utf-8
 
 import sys,optparse
+from PackageScanner.Functions.Subnet.FindHTTPServer import FindHTTPServer1
 
 def process_command_line(argv):
     if argv is None:
@@ -49,8 +50,21 @@ def main(argv=None):
 
     results = search_engine.AnalyzeResult(keywords)
 
-    for index, record in enumerate(results):
-        print '[%03d]\t%s'%(index+1, record)
+    try:
+        scanner = FindHTTPServer1(ports=[80, 443])
+        scanner._description = keywords
+        scanner.scan(targets=results, thread_count=32)
+        for r in scanner:
+            pass
+
+    except KeyboardInterrupt as e1:
+       print "\rFinishing pending requests..."
+       scanner.stop()
+       return -1
+
+    except Exception as e:
+        scanner.stop()
+        print 'main' + str(e)
 
 if __name__ == '__main__':
     main()

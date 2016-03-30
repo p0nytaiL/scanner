@@ -11,6 +11,8 @@ class Scanner_v1:
         self._jobQueue = JobQueue_v1()
         self._description = ''
         self._outputFormatters = []
+        self._enable_header = True
+        self._enable_footer = True
 
     def createJobs(self,targets):
         pass
@@ -26,9 +28,12 @@ class Scanner_v1:
                 self._description = str(targets)
 
             print 'Scan Job %s with %d threads started !' % (self._description, thread_count)
-            for outputFormatter in self._outputFormatters:
-                outputFormatter.printHeader(self._description)
             self.createJobs(targets)
+
+            for outputFormatter in self._outputFormatters:
+                if self._enable_header:
+                    outputFormatter.printHeader(self._description)
+
             self._jobQueue._eventAllJobAdded.set()
 
         except Exception as e:
@@ -70,6 +75,7 @@ class Scanner_v1:
     def stop(self):
         self._jobQueue.stop()
         for outputFormatter in self._outputFormatters:
+            if self._enable_footer:
                 r = outputFormatter.printFooter(self._description)
 
 

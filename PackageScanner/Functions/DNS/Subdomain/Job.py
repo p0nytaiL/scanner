@@ -25,7 +25,7 @@ class resolver:
     failed_code = False
     last_resolver = ""
 
-    def __init__(self, nameservers = ['8.8.8.8']):
+    def __init__(self, nameservers = ['8.8.8.8','114.114.114.114']):
         self.nameservers = nameservers
 
     def query(self, hostname, query_type = 'ANY', name_server = False, use_tcp = False):

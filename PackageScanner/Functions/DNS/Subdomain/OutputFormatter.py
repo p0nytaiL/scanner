@@ -61,7 +61,11 @@ class OutputFormatterFileSubdmamin(OutputFormatterFile):
 
     def printResult(self, job):
         if job.result == None or len(job.result) == 0:
-            return None
+            return False
+
+        if self._fileHandle == None:
+            return False
+
         self._fileHandle.write('<tr>')
         self._fileHandle.write(('<td>http://%s</td>' % (job.hostname)))
         self._fileHandle.write('<td>')
@@ -74,7 +78,9 @@ class OutputFormatterFileSubdmamin(OutputFormatterFile):
         self._fileHandle.write('<tr>')
 
     def printFooter(self, description):
-        self._fileHandle.write("</table></body></html>")
+        if self._fileHandle != None:
+            self._fileHandle.write("</table></body></html>")
+
         OutputFormatterFile.printFooter(self, description)
 
 
@@ -99,7 +105,7 @@ class OutputFormatterNextSubdomain(OutputFormatterNext):
             self._ip_address.add(ns_record['address'])
             ret.append(ns_record['address'])
 
-        return ret
+        return job
 
     def printFooter(self, description):
         pass

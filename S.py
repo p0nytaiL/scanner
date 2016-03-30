@@ -9,6 +9,7 @@ import netaddr
 from PackageScanner.Functions.Subnet.FindHTTPServer import FindHTTPServer
 from PackageScanner.Functions.DNS.Domain_v1 import FindSubDomain
 from PackageScanner.Functions.DNS.TargetDomain import FindTargetSubDomain
+from PackageScanner.Functions.DNS.DomainHTTPServers import FindDomainHTTPServer
 
 def process_command_line(argv):
     if argv is None:
@@ -72,6 +73,13 @@ def main(argv=None):
 
         scanner = FindHTTPServer(ports=target_ports, timeout= global_timeout)
         scanner._description = str(target.network)
+
+    elif function == 'domainhttpserver':
+        socket.setdefaulttimeout(global_timeout)
+        scanner = FindDomainHTTPServer()
+        scanner._description = settings.target
+        scanner._dict_name = settings.dictionary
+        target = settings.target
 
     elif function == 'findsubdomain':
         socket.setdefaulttimeout(global_timeout)
