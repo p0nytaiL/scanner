@@ -14,11 +14,22 @@ pip install requests
 #C段扫描
 ./S.py -f findhttpserver -t 192.168.1.0/24
 
+
+
+#bing搜索功能
 #bing 旁站查询，80端口扫描
 ./Bing.py —-ip 127.0.0.1 
+
+#bing C段批量旁站查询
+Windows：
+	for /l %i in (1,1,255) do Bing.py 192.168.1.%i
+Linux:
+	for i in `seq 254`; do ./Bing.py 192.168.1.$i; done; 
 
 #bing 二级域名查询，80,443端口扫描
 ./Bing.py —-domain github.com
 
-
+#Toolkits
+#bing字典，iciba字典
+./Toolkit.py 单词
 
