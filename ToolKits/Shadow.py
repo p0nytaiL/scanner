@@ -22,7 +22,27 @@ def accountCreateData(day):
 
 #shadow file content
 shadow = '''
-
+root:$6$FhhyXXGoNYZSKTKm$WRX.s3ONYDxccJDE6qrxi6cIZA2E47y8aEg7sAG.d07EvGKf5ZDNitsFRnv8lBiJQVLYik6aQrJwyaeThC1zx.:16851:0:99999:7:::
+bin:*:15980:0:99999:7:::
+daemon:*:15980:0:99999:7:::
+adm:*:15980:0:99999:7:::
+lp:*:15980:0:99999:7:::
+sync:*:15980:0:99999:7:::
+shutdown:*:15980:0:99999:7:::
+halt:*:15980:0:99999:7:::
+mail:*:15980:0:99999:7:::
+uucp:*:15980:0:99999:7:::
+operator:*:15980:0:99999:7:::
+games:*:15980:0:99999:7:::
+gopher:*:15980:0:99999:7:::
+ftp:*:15980:0:99999:7:::
+nobody:*:15980:0:99999:7:::
+vcsa:!!:16851::::::
+saslauth:!!:16851::::::
+postfix:!!:16851::::::
+sshd:!!:16851::::::
+apache:!!:16895::::::
+tcpdump:!!:16896::::::
 '''
 
 rows = shadow.split('\n')
