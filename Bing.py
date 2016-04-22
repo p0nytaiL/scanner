@@ -62,7 +62,6 @@ def main(argv=None):
     settings, args = process_command_line(argv)
 
     search_engine = SearchEngineBing()
-    search_engine.page_parse = PageParseLinks()
     keywords = ''
     description = ''
     if None != settings.ip:

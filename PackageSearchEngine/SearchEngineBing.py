@@ -1,9 +1,9 @@
 import requests
 import urllib,urlparse
 from lxml import html
-from PackageSearchEngine.SearchEngine import SearchEngine,PageParse
+from PackageSearchEngine.SearchEngine import SearchEngine
 from PackageHTTP.UserAgents import getRandomAgent
-
+from PackageHTTP.Body import HTTPBodyResponse
 '''
     def CreateByPassCookie(self):
         # ------------- cookie ------------
@@ -25,6 +25,37 @@ from PackageHTTP.UserAgents import getRandomAgent
                                         cookie_k3, cookie_v3)
         return cookie
 '''
+
+
+class BingResponse(HTTPBodyResponse):
+    def __init__(self, body, encoding):
+        HTTPBodyResponse.__init__(self, body, encoding)
+
+    @property
+    def next_page_url(self):
+        hrefs = self.dom_body.xpath("//a[@class='sb_pagN']")
+        if len(hrefs) == 0:
+            return None
+
+        else:
+            return ('https://www.bing.com' + (hrefs[0].attrib['href']))
+
+    def extractResults(self):
+        pass
+
+class BingResponseLinks(BingResponse):
+    def __init__(self, body, encoding):
+        HTTPBodyResponse.__init__(self, body, encoding)
+
+    def extractResults(self):
+        results = []
+        hrefs = self.dom_body.xpath('//h2/a[@href]')
+        for link in hrefs:
+            parse_result = urlparse.urlparse(link.attrib['href'])
+            results.append(parse_result[1])
+
+        return results
+
 class SearchEngineBing(SearchEngine):
     def __init__(self):
         SearchEngine.__init__(self)
@@ -48,40 +79,15 @@ class SearchEngineBing(SearchEngine):
             'X-Forwarded-For':'203.69.42.169'
         }
         response = requests.get(url=next_page_url, headers = headers)
-        body = response.content
-        dom_body = html.fromstring(body.decode(response.encoding))
+        body = BingResponseLinks(response.content, response.apparent_encoding)
 
-        next_page_url=''
-        hrefs = dom_body.xpath("//a[@class='sb_pagN']")
-        if len(hrefs) == 0:
-            return dom_body, body, None
-
-        for next_page_link in hrefs:
-            next_page_url = next_page_link.attrib['href']
-            next_page_url = ('https://'+ self.hostname + next_page_url)
-            return dom_body, body, next_page_url
+        return body, body.next_page_url
 
 '''
 Bing Result Parses
 '''
-
-class PageParseLinks(PageParse):
-    def __init__(self):
-        pass
-
-    def ExtractResult(self,dom_page, page):
-        results = []
-        hrefs = dom_page.xpath('//h2/a[@href]')
-        for link in hrefs:
-            parse_result = urlparse.urlparse(link.attrib['href'])
-            results.append(parse_result[1])
-
-        return results
-
 if __name__ == '__main__':
     s = SearchEngineBing()
-    s.pageParse = PageParseLinks()
-    for i in range(1,254):
-        results = s.AnalyzeResult(('ip:127.0.0.%d'% (i)))
-        for domain in results:
-            print domain
+    results = s.AnalyzeResult('domain:github.com')
+    for domain in results:
+        print domain

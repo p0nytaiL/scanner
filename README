@@ -1,33 +1,35 @@
 python2.7
 
-
 pip install lxml
 pip install netaddr
 pip install requests
 
-#二级域名
-./S.py -f findsubdomain -t github.com
+#C段http主机扫描
+./S.py -f subnet-httpserver -t 192.168.1.0/24
 
-#二级域名，80，443扫描
-./S.py -f domainhttpserver -t github.com
+#C段prt记录反查(robtex)
+./S.py -f subnet-robtex -t https://www.robtex.com/route/192.168.0.1-24.html
 
-#C段扫描
-./S.py -f findhttpserver -t 192.168.1.0/24
+#二级域名爆破
+./S.py -f subdomain-dns -t github.com
 
+#二级域名http主机扫描80,443(来自二级域名爆破结果)
+./S.py -f subdomain-httpserver -t github.com
 
+#二级域名bing接口
+./S.py -f subdomain-bing -t github.com
 
-#bing搜索功能
-#bing 旁站查询，80端口扫描
-./Bing.py —-ip 127.0.0.1 
+#旁站查询,bing搜索结果
+./S.py -f virtualhost-bing -t 127.0.0.1
 
-#bing C段批量旁站查询
+#C段旁站查询,bing搜索结果
+./S.py -f virtualhost-bing -t 127.0.0.1
 Windows：
-	for /l %i in (1,1,255) do Bing.py 192.168.1.%i
+	for /l %i in (1,1,255) do S.py -f virtualhost-bing -t 127.0.0.%i
 Linux:
-	for i in `seq 254`; do ./Bing.py 192.168.1.$i; done; 
+	for i in `seq 254`; do ./S.py -f virtualhost-bing -t 127.0.0.$i; done;
 
-#bing 二级域名查询，80,443端口扫描
-./Bing.py —-domain github.com
+
 
 #Toolkits
 #bing字典，iciba字典

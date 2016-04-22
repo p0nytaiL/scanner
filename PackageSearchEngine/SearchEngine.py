@@ -32,19 +32,18 @@ ponytail 2015-10-15
 
 
     同时返回page与dom_page的原因在于,在解析next页面的时候,已经将page处理成dom_page了,干脆一起返回
+
+ponytail 2015-10-15
+  SearchEngine返回HTTPResponseBody(同时包含html文本,以及html dom对象)
+  结果存入数组返回,重写用HTTPResponseBody的extractResults方法
+  用xpath提取出感兴趣的内容
+
 '''
-class PageParse():
-    def __init__(self):
-        pass
-
-    def ExtractResult(self,dom_page, page):
-        return [page.encode('utf-8')]
-
 
 class SearchEngine(object):
     def __init__(self):
         self.keyword = None
-        self.page_parse = PageParse()
+        self.response_handler = None
 
     def CreateFirstSearchPageUrl(self):
         pass
@@ -57,35 +56,34 @@ class SearchEngine(object):
 
     def Search(self,keyword):
         print 'Start Searching...'
-        dom_pages=[]
         pages=[]
         self.keyword = keyword#urllib.quote(keyword)
         next_page_url = self.CreateFirstSearchPageUrl()
-        if next_page_url == '':
-            return None
+        if next_page_url != None and len(next_page_url) == 0 :
+            print 'Missing first page url ???'
+            return pages
 
-        cnt_page=0
         while True:
             print next_page_url
-            dom_page, page, next_page_url = self.GoNextPage(next_page_url)
-            if dom_page != None:
-                dom_pages.append(dom_page)
+            page, next_page_url = self.GoNextPage(next_page_url)
+            if page != None :
                 pages.append(page)
 
             if next_page_url == None or next_page_url == '':
                 break
 
         print '\r\nFinish (%d Pages)!\r\n' % (len(pages))
-        return dom_pages, pages
+        return pages
 
+    #无法统一处理,不同的搜索功能要求返回的结果均不相同
+    #默认处理有问题的话可以重写此方法
     def AnalyzeResult(self, keyword):
         result = []
-        dom_pages, pages = self.Search(keyword)
+        pages = self.Search(keyword)
 
-        if self.page_parse != None:
-            for i in xrange(0,len(pages)):
-                tmp = self.page_parse.ExtractResult(dom_pages[i], pages[i])
-                result.extend(tmp)
+        for page in pages:
+            tmp = page.extractResults()
+            result.extend(tmp)
 
         #结果去重
         result_set = set()

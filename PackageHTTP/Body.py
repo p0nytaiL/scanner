@@ -20,14 +20,14 @@ DEFAULT_BODY_ENCODING = sys.getdefaultencoding()
 将页面解码为unicode，再传递给lxml.html.fromstring使用
 
 
-requests 中已包含完整的压缩,编码处理
-这部分代码留着备用
+requests 中已包含完整的压缩,解码处理
+HTTPBody部分代码暂时保留备用
 '''
 
 class HTTPBody:
     def __init__(self):
         self.content_type = ''
-        self.excetion = None
+        self.exception = None
 
     '''
         RFC 1950 (zlib compressed format)
@@ -118,6 +118,7 @@ class HTTPBodyResponse(HTTPBody):
         self.body = body
         self.encoding = encoding
         self.dom_body = None
+        self._parse()
 
     def _parse(self):
         if self.dom_body != None:
@@ -125,11 +126,10 @@ class HTTPBodyResponse(HTTPBody):
         try:
             self.dom_body = html.fromstring(self.body.decode(self.encoding))
         except Exception as e:
-            self.excetion = e
+            self.exception = e
 
     @property
     def title(self):
-        self._parse()
 
         title = ''
         try:
@@ -150,9 +150,9 @@ class HTTPBodyResponse(HTTPBody):
 
         return title
 
-
-
-
+    #页面解析
+    def extractResults(self):
+        pass
 
 
 
