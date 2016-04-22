@@ -80,7 +80,8 @@ def main(argv=None):
     elif function == 'subnet-robtex':
         socket.setdefaulttimeout(global_timeout)
         search_engine = SearchEngineRobtex()
-        search_engine.url = settings.target
+        #https://www.robtex.com/route/192.168.0.1-24.html
+        search_engine.url = 'https://www.robtex.com/route/' + settings.target.replace('/','-') + '.html'
         scanner = FindHTTPServer1(ports = [80,443], timeout= global_timeout)
         scanner._description = 'robtex'
         target = search_engine.AnalyzeResult('')
@@ -108,7 +109,7 @@ def main(argv=None):
         keywords = 'domain:%s' % (settings.target)
         results = search_engine.AnalyzeResult(keywords)
 
-        scanner = FindHTTPServer1(ports = [80,443])
+        scanner = FindHTTPServer1(ports = [80,443],timeout= global_timeout)
         scanner._description = settings.target
         target = results
 
@@ -119,7 +120,7 @@ def main(argv=None):
         keywords = 'ip:%s' % (settings.target)
         results = search_engine.AnalyzeResult(keywords)
 
-        scanner = FindHTTPServer1(ports = [80,443])
+        scanner = FindHTTPServer1(ports = [80,443], timeout= global_timeout)
         scanner._description = settings.target
         target = results
 
