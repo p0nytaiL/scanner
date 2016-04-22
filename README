@@ -8,7 +8,7 @@ pip install requests
 ./S.py -f subnet-httpserver -t 192.168.1.0/24
 
 #C段prt记录反查(robtex)
-./S.py -f subnet-robtex -t https://www.robtex.com/route/192.168.0.1-24.html
+./S.py -f subnet-robtex -t 192.168.0.1/24.html
 
 #二级域名爆破
 ./S.py -f subdomain-dns -t github.com
