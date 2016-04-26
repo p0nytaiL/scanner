@@ -32,9 +32,10 @@ class PacketStromResponse(HTTPBodyResponse):
             result['title'] = dom_title[0].text
             #tags
             dom_tages = record.xpath('./dd[@class="tags"]')
-            dom_tages = dom_tages[0].xpath('./a')
-            for tags in dom_tages:
-                result['tags'].append(tags.text)
+            if len(dom_tages):
+                dom_tages = dom_tages[0].xpath('./a')
+                for tags in dom_tages:
+                    result['tags'].append(tags.text)
 
             results.append(result)
 
@@ -99,6 +100,10 @@ def echoResults(records):
         else:
             others.append(i)
 
+    advisories.sort()
+    tools.sort()
+    others.sort()
+
     print 'TOOLS[%d]:'%(len(tools))
     for tool in tools:
         print '\t', tool['title']
@@ -119,5 +124,5 @@ def echoResults(records):
 
 if __name__ == '__main__':
     s = SearchEnginePacketStromSearch()
-    records = s.AnalyzeResult('synology')
+    records = s.AnalyzeResult('ssh')
     echoResults(records)
