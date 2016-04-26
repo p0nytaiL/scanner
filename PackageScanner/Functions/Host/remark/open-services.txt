@@ -1,0 +1,150 @@
+小于1024的端口号可以参考RFC3232
+
+
+邮件服务
+	25/465      SMTP/SMTPS
+	109/110/995 POP2/POP3/POP3S
+	143/993     IMAP/IMAPS
+
+
+
+
+文件交换
+	21	ftp
+	匿名帐户 anonymous
+
+		sftp
+
+		scp
+
+	69 tcp/udp	tftp
+
+	nfs（rpc相关）
+	http://linux.vbird.org/linux_server/0330nfs.php
+
+	873	rsync
+
+		列模块	rsync 127.0.0.1::
+		下载	rsync -av root@127.0.0.1::module /tmp/root
+		上传	rsync -av /tmp/root/1.php root@1270.0.1::module
+
+
+    nas
+        磁盘挂载服务  3620
+        synology 5000/5001 web管理端口
+
+硬件基础设施（路由，交换，snmp）
+	snmp udp 161
+		标准的SNMP服务使用161和162端口，厂商私有的实现一般使用199、391、705和1993端口。
+		snmpv1,snmpv2,snmpv3
+
+	bgp tcp 179
+
+    ipmi udp 623
+
+        参考
+        http://safecomputing.umich.edu/events/sumit13/docs/Bonkoski_IPMI_SUMIT_2013b.pdf
+        https://community.rapid7.com/community/metasploit/blog/2013/07/02/a-penetration-testers-guide-to-ipmi
+        https://github.com/zenfish/ipmi
+        http://fish2.com/ipmi/remote-pw-cracking.html
+
+        hash泄漏https://www.tenable.com/plugins/index.php?view=single&id=80101
+多媒体
+	SIP
+	RTP
+
+
+远程访问
+	telnet（23）
+	ssh（22）
+	remote desktop services（3389）
+	radmin (4899)
+	vnc（5900/5800）
+	pc anywhere（5631）
+	vpn
+
+数据库
+	mysql(3306)
+
+	sqlserver(1433)
+
+	oracle(1521)
+		iSqlPlus(5560,7778）
+	http://www.vulnerabilityassessment.co.uk/oat.htm
+
+
+	pgsql(5432)
+
+	sybase
+
+	db2
+
+	informix
+	mongodb(27017,28017)
+
+	hadoop(50070)
+
+前段基础设施
+	代理，
+		squid(3128)
+		varnish(6082)
+
+	缓存
+		key-value存储系统
+			redis(6379)
+				redis-cli -h 127.0.0.1 PING（PONG）
+				http://www.tutorialspoint.com/redis/redis_commands.htm
+				redis-cli -h 127.0.0.1 monitor
+				redis-cli -h 127.0.0.1 -p 6379 -a mysupersecretpassword
+
+			memcache(11211)
+
+
+web服务
+	HTTP服务器
+
+		扩展
+			webdav
+			openssl
+			jd
+
+	应用服务器
+		jboss
+		weblogic（7001）
+		websphere
+		tomcat（8080）
+		glassfish（4848）
+
+	jenkins
+	rundeck(4440)
+
+
+	CMS
+		wordpress/durpel/joomla
+
+	NAS
+
+
+	设备管理web服务
+		路由/交换
+
+		多媒体（ip电话，摄像头）
+		SIP／RTP
+
+		打印机
+		LPD（运行在打印机上）
+		LPR（与打印机交互）
+
+Windows端口
+135 		tcp 		MSRPC
+137 		udp			NetBIOS
+139/445 	tcp 		NetBIOS Session
+389/3268 	tcp/udp		LDAP
+
+
+Linux/Unix端口
+
+111		tcp/udp		portmapper
+32771	tcp/udp		Solaris portmapper
+http://examples.oreilly.com/networksa/tools/rpc_proxy.pdf
+

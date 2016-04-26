@@ -56,3 +56,6 @@ IMAPS和IMAP协议一样，也是用来接收邮件的，只是更安全些，�
 25/465      SMTP/SMTPS
 109/110/995 POP2/POP3/POP3S
 143/993     IMAP/IMAPS
+
+http://blog.mailgun.com/25-465-587-what-port-should-i-use/
+http://www.pcmag.com/article2/0,2817,1838667,00.asp
