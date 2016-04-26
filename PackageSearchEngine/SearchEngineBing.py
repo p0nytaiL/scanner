@@ -1,6 +1,5 @@
 import requests
 import urllib,urlparse
-from lxml import html
 from PackageSearchEngine.SearchEngine import SearchEngine
 from PackageHTTP.UserAgents import getRandomAgent
 from PackageHTTP.Body import HTTPBodyResponse
