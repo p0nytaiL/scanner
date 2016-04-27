@@ -2,3 +2,5 @@
 *.py[co]
 *.htm
 *.html
+
+examples/robtex.py
