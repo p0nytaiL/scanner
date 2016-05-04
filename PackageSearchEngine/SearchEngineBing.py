@@ -30,6 +30,7 @@ class BingResponse(HTTPBodyResponse):
     def __init__(self, body, encoding):
         HTTPBodyResponse.__init__(self, body, encoding)
 
+
     @property
     def next_page_url(self):
         hrefs = self.dom_body.xpath("//a[@class='sb_pagN']")
@@ -45,13 +46,17 @@ class BingResponse(HTTPBodyResponse):
 class BingResponseLinks(BingResponse):
     def __init__(self, body, encoding):
         HTTPBodyResponse.__init__(self, body, encoding)
+        self.bool_raw = False
 
     def extractResults(self):
         results = []
         hrefs = self.dom_body.xpath('//h2/a[@href]')
         for link in hrefs:
-            parse_result = urlparse.urlparse(link.attrib['href'])
-            results.append(parse_result[1])
+            if self.bool_raw:
+                parse_result = urlparse.urlparse(link.attrib['href'])
+                results.append(parse_result[1])
+            else:
+                results.append(link.attrib['href'])
 
         return results
 

@@ -23,6 +23,9 @@ def process_command_line(argv):
     parser.add_option("-d", "--domain", dest="domain",
                   help="domain", metavar="DOMAIN")
 
+    parser.add_option("-s", "--string", dest="string",
+                  help="string", metavar="STRING")
+
     parser.add_option("-b", "--banner", dest="banner",
                   help="banner", metavar="BANNER")
 
@@ -70,6 +73,9 @@ def main(argv=None):
     elif None != settings.domain:
         keywords = 'domain:%s' % (settings.domain)
         description = settings.domain
+    elif None != settings.string:
+        keywords = '%s' % (settings.string)
+        description = settings.string
     else:
         pass
 
