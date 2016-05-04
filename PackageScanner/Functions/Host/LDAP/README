@@ -1,0 +1,76 @@
+https://www.centos.org/docs/5/html/CDS/ag/8.0/Finding_Directory_Entries-Using_ldapsearch.html
+
+常见用法:
+    带账户访问
+        根节点:
+            ldapsearch -H localhost -D "cn=Programmer, ou=Test, dc=localhost" -w password -b "" base "objectclass=*"
+
+        根节点下第一级节点
+            ldapsearch -H localhost -D "cn=Programmer, ou=Test, dc=localhost" -w password -b "" one "objectclass=*"
+
+        搜索包含mail属性的所有节点
+            ldapsearch -H localhost -D "cn=Programmer, ou=Test, dc=localhost" -w password -b "" one "mail=*"
+
+        搜索包含userPassword的所有节点
+            ldapsearch -H localhost -D "cn=Programmer, ou=Test, dc=localhost" -w password -b "" one "userPassword=*"
+
+
+        搜索同时包含mail,userPassword属性的所有节点
+            ldapsearch -H localhost -D "cn=Programmer, ou=Test, dc=localhost" -w password -b "" one "(&(userPassword=*)(mail=*))"
+
+        过滤表达式格式(operator(filter)(filter))
+        & -> and
+        | -> or
+        ! -> not
+
+    匿名访问:
+        把-D "cn=Programmer, ou=Test, dc=localhost" -w password这两参数去掉就行
+
+
+主机名
+    -h
+
+用户名(必须是Distinguished Name),密码
+    -D  -w
+
+    指定搜索起点
+    -b
+        从某节点
+        -b "cn=Barbara Jensen, ou=Product Development,dc=example,dc=com"
+        从根节点
+        -b ""
+        环境变量中可能配置LDAP_BASEDN
+
+
+    用户名/密码
+    -D 必须是DN格式的用户名
+    -w 密码
+    如果支持匿名访问,则不需要这两个参数
+
+    主机名
+    -h 可以是域名或者IP地址
+    不指定的话代表本机
+
+    端口
+    -p ldap默认端口389/636(ssl)
+
+    超时设定(单位秒)
+    -l
+    默认的超时设定为3600秒
+
+    指定搜索域
+    -s
+        base 只搜索-b所指定的节点中的内容
+        one 只搜索-b所指定的节点下的子节点
+        sub 搜索-b所指定的节点下的子节点(递归)
+
+
+输出格式
+    -L
+    -x
+
+
+openldap中的密码加密方式
+http://www.openldap.org/doc/admin24/security.html
+
+
