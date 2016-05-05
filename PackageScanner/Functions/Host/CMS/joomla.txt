@@ -1,0 +1,2713 @@
+	Secunia Security Advisory 45118
+		[]
+	Joomla Admin Panel Bruteforcer
+		['cracker', 'php']
+	Bottay IRC Bot 2.2
+		['denial of service', 'xss', 'sql injection']
+	Joomla 1.5 URL Redirection
+		['exploit']
+	Joomla Akeeba Kickstart Unserialize Remote Code Execution
+		['exploit']
+	Joomla Cryptography Weakness
+		['exploit']
+	Joomla Ozio Gallery 2 Mail Relay
+		['exploit']
+	Joomla RSGallery2 Backdoor
+		['exploit']
+	Joomla Real Estate Code Injection
+		['exploit']
+	Joomla! Spam Mail Relay
+		['exploit']
+	TISA2007-01.txt
+		['exploit']
+	Joomla HD FLV 2.1.0.1 Arbitrary File Download
+		['exploit', 'arbitrary']
+	Joomla Mac Gallery 1.5 Arbitrary File Download
+		['exploit', 'arbitrary']
+	Joomla OzioGallery2 Arbitrary File Write
+		['exploit', 'arbitrary']
+	Joomla User URL Redirection
+		['exploit', 'arbitrary']
+	SA-20070722-0.txt
+		['exploit', 'arbitrary', 'code execution']
+	Joomla Media Manager File Upload Vulnerability
+		['exploit', 'arbitrary', 'code execution', 'file upload']
+	joomlauhp-upload.txt
+		['exploit', 'arbitrary', 'code execution', 'file upload']
+	Joomla Appointment Booking Pro Arbitrary File Reading
+		['exploit', 'arbitrary', 'file inclusion']
+	Joomla 1.7 / 2.5 Civicrm Arbitrary File Upload
+		['exploit', 'arbitrary', 'file upload']
+	Joomla 1.6.0 SQL Injection / PHP Execution
+		['exploit', 'arbitrary', 'php', 'sql injection']
+	Joomla 3.4.5 Object Injection
+		['exploit', 'code execution']
+	Joomla Camp26 Visitor Data 1.1 Code Execution
+		['exploit', 'code execution']
+	Joomla Flexicontent Remote Code Execution
+		['exploit', 'code execution']
+	Joomla 1.5.x Cross Site Request Forgery
+		['exploit', 'csrf']
+	Joomla Core 1.5.x Denial Of Service
+		['exploit', 'denial of service']
+	joomla.txt
+		['exploit', 'denial of service', 'arbitrary']
+	Joomla Bookman Denial Of Service
+		['exploit', 'denial of service', 'vulnerability']
+	Joomla Googlemaps 3.2 Cross Site Scripting / Denial Of Service
+		['exploit', 'denial of service', 'vulnerability', 'xss']
+	Joomla Googlemaps XSS / XML Injection / Path Disclosure / DoS
+		['exploit', 'denial of service', 'vulnerability', 'xss']
+	Joomla Themes Cross Site Scripting / Denial Of Service
+		['exploit', 'denial of service', 'vulnerability', 'xss']
+	Joomla-Base XSS / XML Injection / Denial Of Service
+		['exploit', 'denial of service', 'vulnerability', 'xss', 'info disclosure']
+	Joomla Album 1.14 Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla Archaic Binary Gallery Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla Autartitarot Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla CCNewsLetter Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla Dashboard Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla JA T3-Framework Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla JCollection Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla JVideoDirect Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla JaShowcase Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla Jigsaw Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla Prime Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla Simple File Lister 1.0 Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla jr_questionnaire Directory Traversal
+		['exploit', 'file inclusion']
+	Joomla jr_tfb Directory Traversal
+		['exploit', 'file inclusion']
+	joomlaimage-traverse.txt
+		['exploit', 'file inclusion']
+	Joomla 2.5.3 Information Disclosure
+		['exploit', 'info disclosure']
+	Joomla Captcha 4.5.1 File Disclosure
+		['exploit', 'info disclosure']
+	Joomla PicSell Local File Disclosure
+		['exploit', 'info disclosure']
+	Joomla Seber Cart 1.0.0.1x Local File Disclosure
+		['exploit', 'info disclosure']
+	Joomla Simpledownload File Disclosure
+		['exploit', 'info disclosure']
+	Joomla Virtuemart 2.0.2 Information Disclosure
+		['exploit', 'info disclosure']
+	Joomla UlajaxIM 1.1 Javascript Execution
+		['exploit', 'javascript']
+	joomlarsfiles-download.txt
+		['exploit', 'local']
+	Joomla 1.5.8 Directory Traversal Vulnerability
+		['exploit', 'local', 'file inclusion']
+	Joomla A Cool Debate 1.0.3 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Abbrev Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Ad Agency Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla AddressBook 1.5.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Advertising 2.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Affiliate Feeds 880 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Agora 2.5.x Pantheon Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Agora 3.0.0b Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla AlphaUserPoints Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Appointment 1.5 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Arcade Games 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Archery Scores 1.0.6 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Autographbook Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla BCA-RSS-Syndicator Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla BCH Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla BF Survey Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla BR Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla BeeHeard Lite 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Bible Study Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Biographies Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Bit Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Blog Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Boss Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Bulkenquery Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla CCNewsLetter Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla CKForms Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla CV Maker 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Canteen Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Catalogue Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Community Builder Enhanced Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Community Polls Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Connect Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Contact Us Google Map 1.2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla DW Graph Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Daily Meals Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Dcnews Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Delicious Bookmarks 0.0.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Deluxe Blog Factory 1.1.2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Digital Diary 1.5.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla EContent Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Easy Ad Banner 0.25 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Event Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla FDione Form Wizard 1.0.2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla FLEXIcontent 1.5 Stable Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Fabrik 2.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Flash Fun Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla FlashGames 1.5.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Flickr 1.0.x Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Foobla Suggestions Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Front End User Access Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Fundhelp Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Funny News Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla G2Bridge Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla GCalendar 2.1.5 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Gadget Factory 1.0.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Ganalytics Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Graphics 1.0.6 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Hello Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Highslide JS 1.5 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Horoscope Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla If Nexus Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Img Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Intuit Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla J!Research Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla J!WHMCS Integrator Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JA Comment Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JA Job Board 1.4.4 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JA Voice Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Ajax Event Calendar 1.0.3 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Auto Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Event Calendar Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Job Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE K2 Story Submit Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Media Player Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Quote Form Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Section Finder Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JE Tooltip Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JFeedback 1.2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JInventory Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JMSFileSeller Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JProject Manager 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JRadio Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JStore Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JVehicles Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Janews Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Jeajaxeventcalendar Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Jeformcr Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Jgrid 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Job Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JoomMail 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla JoomTouch 1.0.2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Jotloader 2.2.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Jphone Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Juke Box 1.7 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Juliaportfolio Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla KP Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Linkr Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Loginbox Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Love Factory 1.3.4 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla MMS Blog 2.3.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla MS Comment Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla MT Fire Eagle 1.2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Magic Updater Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla MailChimpCCNewsletter Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Matamko 1.01 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla MediQnA Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Media Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Memory Book 1.2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla MooFAQ Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Morfeoshow Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Multiple Map Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Music Manager Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla My Files Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla MyBlogController Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla News Portal 1.5.x Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Ninja RSS Syndicator 1.0.8 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla NoticeBoard 1.3 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Omilen Photo Gallery 0.5b LFI
+		['exploit', 'local', 'file inclusion']
+	Joomla Online Exam 1.5.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Online Market 2.x Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Orgchart 1.0.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Otzivi Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla PC Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla PCChess Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla PR Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla People Component 1.0.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Percha Categories Tree 0.6 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Percha Downloads Attach 1.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Percha Fields Attach Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Percha Gallery 1.6 Beta Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Percha Image Attach 1.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Phocadownload Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Photo Battle 1.0.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Picasa 2.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Picasa2 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Picasa2Gallery 1.2.8 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Polix Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla PollXT Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Portfolio Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla PowerMail Pro 1.5.3 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Preventive And Reservation 1.0.5 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla ProDesk 1.5 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Product Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Profile Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Project Fork 2.0.10 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Property Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla RSSReader Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla RWCards Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Realtyna Translator Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Record Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Redirect Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Redshop Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Redtwitter Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla RokQuickCart Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Rokdownloads Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Rule Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla S5 Clan Roster Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla SMEStorage Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla SVMap 1.1.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Saber Cart 1.0.0.12 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Sadnews Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Sbsfile Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Sectionex Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Seyret Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Shoutbox Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Simple Download Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Simple Page Option Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla SmartSite Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Some Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Spo 1.5.x Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Sweetykeeper 1.5.x Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla TRAVELbook 1.0.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Ticketbook 1.0.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla TweetLA! 1.0.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Ulti RPX 2.1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Ultimate Portfolio 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla User 1.5 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla User Status Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla VJDEO 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla WISro Yahoo Quotes Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla WMI Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Webee 2.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Welcome Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Wisroyq Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla World Rates Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla XGallery 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla XMovie 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla XVS Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla Xcomp Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla YJ Contact Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla ZiMB Comment 0.8.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla ZiMB Manager 0.1 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla ZtAutoLink Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla aWiki Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla eDir Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla iF surfALERT Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla obSuggest Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla spsNewsletter Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla webERPcustomer Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla wgPicasa 1.0 Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Joomla! 1.5 Core Design Scriptegrator Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	Mambo / Joomla FCKEditor Local File Inclusion
+		['exploit', 'local', 'file inclusion']
+	joomlacartweberp-lfi.txt
+		['exploit', 'local', 'file inclusion']
+	joomlaintellect-lfi.txt
+		['exploit', 'local', 'file inclusion']
+	joomlaprodesk-lfi.txt
+		['exploit', 'local', 'file inclusion']
+	Joomla Fsave 2.0 Local File Disclosure
+		['exploit', 'local', 'info disclosure']
+	Joomla RD Download File Disclosure
+		['exploit', 'local', 'info disclosure']
+	Joomla Shape 5 MP3 Player 2.0 Local File Disclosure
+		['exploit', 'local', 'info disclosure']
+	Joomla 1.5.x Local File Inclusion
+		['exploit', 'local', 'php', 'file inclusion']
+	Joomla Custom PHP Pages Local File Inclusion
+		['exploit', 'local', 'php', 'file inclusion']
+	Joomla Contact Us Draw Root Map 1.1 Local File Inclusion
+		['exploit', 'local', 'root', 'file inclusion']
+	Joomla Multiple Root Local File Inclusion
+		['exploit', 'local', 'root', 'file inclusion']
+	Joomla 1.5.12 Path Disclosure / Local File Inclusion
+		['exploit', 'local', 'vulnerability', 'file inclusion']
+	Joomla Basdv Local File Inclusion / Directory Traversal
+		['exploit', 'local', 'vulnerability', 'file inclusion']
+	Joomla Branch Local File Inclusion / Download
+		['exploit', 'local', 'vulnerability', 'file inclusion', 'info disclosure']
+	Joomla Docman Path Disclosure / Local File Inclusion
+		['exploit', 'local', 'vulnerability', 'file inclusion', 'info disclosure']
+	Joomla Forms Local File Inclusion / Download
+		['exploit', 'local', 'vulnerability', 'file inclusion', 'info disclosure']
+	Joomla! 3.0.2 PHP Object Injection
+		['exploit', 'php']
+	Joomla! 3.0.3 PHP Object Injection
+		['exploit', 'php']
+	Joomla 1.6.0 SQL Injection
+		['exploit', 'php', 'sql injection']
+	Joomla PHP Component SQL Injection
+		['exploit', 'php', 'sql injection']
+	joomlaastats-sql.txt
+		['exploit', 'php', 'sql injection']
+	joomlafiliale-sql.txt
+		['exploit', 'php', 'sql injection']
+	joomlamedia-sql.txt
+		['exploit', 'php', 'sql injection']
+	joomlapony-sql.txt
+		['exploit', 'php', 'sql injection']
+	russian-multi.txt
+		['exploit', 'php', 'vulnerability']
+	Joomla 3.1.5 Cross Site Scripting
+		['exploit', 'php', 'xss']
+	Joomla 1.5.12 TinyBrowser File Upload Code Execution
+		['exploit', 'remote']
+	Joomla Jw_allVideos Remote File Download
+		['exploit', 'remote']
+	joomla-changepasswd.txt
+		['exploit', 'remote']
+	Joomla/WordPress XCloner Command Execution / Password Disclosure
+		['exploit', 'remote', 'arbitrary', 'vulnerability', 'bypass', 'info disclosure']
+	Joomla Face Gallery 1.0 SQL Injection / File Download
+		['exploit', 'remote', 'arbitrary', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla / Mambo Ezine Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Ads Manager Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Ajax Chat 1.0 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Banners Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Book Library 1.0 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla BookLibrary 1.5.2.4 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Calendrier Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Eventcal Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Frontpage Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Gcalendar Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Google Maps Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla GroupJive 1.8 B4 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla JCS Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla JCalPro 1.5.3.6 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla JD-WordPress Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla JVB Bridge Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Jomestate Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Jreactions Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Jwmmxtd Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Lurm Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla MGM Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Mamboleto Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Media Library 1.5.3 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Phocadownload Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Pinboard Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Pony Gallery Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla RWCards Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Real Estate Manager 1.0 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Sef Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Smartformer 2.4 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla THopper Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Universal Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Vehicle Manager 1.0 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Virtuemart Featureprod Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Virtuemart Latestprod Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Virtuemart Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla Xplorer 1.6.2 Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla swMenuPro Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomla-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomla12pic-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomla150-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaauto-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlacolorlab-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlacustompages-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomladada-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomladbquery-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlafacile-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaflash-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaflashcom-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaj-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlajuser-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlamambo-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlamos-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlamosdir-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlamp3-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlanew-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaonguma-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaonline-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlapan-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaradio-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlarss-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlaswm-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlavirtue-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlavisites-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlawmt-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	joomlawmtport-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	mosreport-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	taskhopper-rfi.txt
+		['exploit', 'remote', 'code execution', 'file inclusion']
+	Joomla 1.5.12 Code Execution Via TinyMCE
+		['exploit', 'remote', 'code execution', 'file upload']
+	Joomla Simple File Upload 1.3 Remote Code Execution
+		['exploit', 'remote', 'code execution', 'file upload']
+	Joomla PollXT Remote File Inclusion
+		['exploit', 'remote', 'code execution', 'proof of concept', 'file inclusion']
+	Joomla Content History SQL Injection Remote Code Execution
+		['exploit', 'remote', 'code execution', 'sql injection']
+	Joomla XCloner Remote Command Execution
+		['exploit', 'remote', 'denial of service', 'local', 'vulnerability', 'xss', 'file inclusion', 'info disclosure']
+	Echo Security Advisory 2006.37
+		['exploit', 'remote', 'file inclusion']
+	Joomla Cmimarketplace Directory Traversal
+		['exploit', 'remote', 'file inclusion']
+	Joomlaextended_registration.txt
+		['exploit', 'remote', 'file inclusion']
+	comcomprofiler.txt
+		['exploit', 'remote', 'file inclusion']
+	joomla-comalbum-rfi.txt
+		['exploit', 'remote', 'file inclusion']
+	joomla10.txt
+		['exploit', 'remote', 'file inclusion']
+	joomlainclude.txt
+		['exploit', 'remote', 'file inclusion']
+	kochsuite.txt
+		['exploit', 'remote', 'file inclusion']
+	mambowiki.txt
+		['exploit', 'remote', 'file inclusion']
+	rssxt.txt
+		['exploit', 'remote', 'file inclusion']
+	xshop.txt
+		['exploit', 'remote', 'file inclusion']
+	Joomla Agora Component 3.0.0 RC1 File Upload
+		['exploit', 'remote', 'file upload']
+	Joomla Pinboard Remote File Upload
+		['exploit', 'remote', 'file upload']
+	joomlaexpose-rfu.txt
+		['exploit', 'remote', 'file upload']
+	joomlamamml-upload.txt
+		['exploit', 'remote', 'file upload']
+	Joomla AllVideos 3.1 File Disclosure
+		['exploit', 'remote', 'info disclosure']
+	Joomla SQLReport Password Disclosure
+		['exploit', 'remote', 'info disclosure']
+	eXtplorer Code Execution
+		['exploit', 'remote', 'local', 'code execution', 'file inclusion']
+	Joomla Simple Downloader 0.9.5 Local File Inclusion / Command Execution
+		['exploit', 'remote', 'local', 'file inclusion']
+	Joomla Doqment SQL Injection / LFI / RFI
+		['exploit', 'remote', 'local', 'vulnerability', 'code execution', 'sql injection', 'file inclusion']
+	Joomla 1.5.12 Remote File Execution
+		['exploit', 'remote', 'local', 'vulnerability', 'file inclusion']
+	Joomla AWDwall 1.5.4 Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla Canteen 1.0 SQL Injection / Local File Inclusion
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla Ckforms Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla Gallery XML 1.1 Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla JE Guestbook 1.0 Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla Projects Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla RSform 1.0.5 Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla Video Gallery Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla Visa SQL Injection / Local File Inclusion
+		['exploit', 'remote', 'local', 'vulnerability', 'sql injection', 'file inclusion']
+	Joomla Restaurant Guide Cross Site Scripting / Local File Inclusion / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'xss', 'sql injection', 'file inclusion']
+	Joomla Helpdesk Pro XSS / File Disclosure / SQL Injection
+		['exploit', 'remote', 'local', 'vulnerability', 'xss', 'sql injection', 'file inclusion', 'file upload']
+	Joomla HTTP Header Unauthenticated Remote Code Execution
+		['exploit', 'remote', 'php', 'code execution']
+	Joomla JomSocial 2.6 Code Execution
+		['exploit', 'remote', 'php', 'code execution']
+	flashtreegallery-rfi.txt
+		['exploit', 'remote', 'php', 'code execution', 'file inclusion']
+	joomla1014-rfi.txt
+		['exploit', 'remote', 'php', 'code execution', 'file inclusion']
+	joomlaoldconfig-rfi.txt
+		['exploit', 'remote', 'php', 'code execution', 'file inclusion']
+	Joomla Phoca Documentation Component SQL Injection Exploit
+		['exploit', 'remote', 'php', 'sql injection']
+	Joomla Wap4Joomla SQL Injection
+		['exploit', 'remote', 'php', 'sql injection']
+	Joomla gigCalendar 1.0 SQL Injection index.php
+		['exploit', 'remote', 'php', 'sql injection']
+	joomlaartist-sql.txt
+		['exploit', 'remote', 'php', 'sql injection']
+	Joomla 1.6.x Administrator PHP Code Execution
+		['exploit', 'remote', 'shell']
+	Joomla Aclassfb Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Aclsfgpl Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Annonces Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Art Uploader 1.0.1 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Attachments Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Bch / Content Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Cartikads Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Collector Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla DJ Classifieds Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla DentroVideo 1.2 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Dione FileUploader 1.0.1 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Easy Flash Uploader 2.0 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Eportfolio Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla FreiChat Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla GarysCookBook 3.0.x Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla IDoEditor 1.6.16 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla JE Property Finder Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla JMultimedia Command Execution
+		['exploit', 'remote', 'shell']
+	Joomla Joomleague Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla KSAdvertiser Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Maian Media 1.5.8.x Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Maian15 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla MySMS Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla OS Property Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Remository Remote Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Rokdownloads Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Simple Image Upload 1.0 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Simple Photo Gallery Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Simple SWFUpload 2.0 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla hwdVideoShare Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla jFancy 2.03 Shell Upload
+		['exploit', 'remote', 'shell']
+	WordPress / Joomla Creative Contact Form 0.9.7 Shell Upload
+		['exploit', 'remote', 'shell']
+	Joomla Hotornot2 Shell Upload
+		['exploit', 'remote', 'shell', 'code execution']
+	Joomla Alphacontent phpThumb.php Shell Upload
+		['exploit', 'remote', 'shell', 'php']
+	Joomla Alphauserpoints phpThumb.php Shell Upload
+		['exploit', 'remote', 'shell', 'php']
+	Joomla MemoryBook 1.2 SQL Injection / RFI
+		['exploit', 'remote', 'shell', 'vulnerability', 'code execution', 'sql injection', 'file inclusion']
+	Joomla CCBoard SQL Injection / Shell Upload
+		['exploit', 'remote', 'shell', 'vulnerability', 'sql injection']
+	Joomla Joomgalaxy 1.2.0.4 Shell Upload / SQL Injection
+		['exploit', 'remote', 'shell', 'vulnerability', 'sql injection']
+	Joomla Joomsport SQL Injection / Shell Upload
+		['exploit', 'remote', 'shell', 'vulnerability', 'sql injection']
+	Vulnerability In Popular Plugins
+		['exploit', 'remote', 'shell', 'vulnerability', 'xss', 'sql injection']
+	Joomla / XOOPS Zina SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla 1.6.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla 2.5.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla 3.44 SQL Injection 
+		['exploit', 'remote', 'sql injection']
+	Joomla 5starhotels Component SQL Injection Exploit
+		['exploit', 'remote', 'sql injection']
+	Joomla ABC 1.1.7 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ACMisc SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ACProjects SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ACStartSeite SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ACTeamMember SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla AJAX Shoutbox SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla AML 2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Aardvertiser 2.1 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla About SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Actions SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Adds Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Advert SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Afisha SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Agency SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Agenda 1.0.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Airmonoblock Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Aist SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Akobook 2.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Alameda 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Alert SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Alfresco SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Alfurqan15x SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Allvideos Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Almond Classifieds 5.6.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla AlphaUserPoints SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Alphacontent SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Amocourse SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Annuaire SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Aprice SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Article Manager SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Article SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Articles SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla As SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Astra SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla AtEvents SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Autartimonial SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla AutoArticles 3000 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Avosbillets SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla B2 Portfolio 1.0.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla BBS SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla BF Quiz 1.3.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla BF Quiz SQL Injection Exploit
+		['exploit', 'remote', 'sql injection']
+	Joomla BF Survey Basic SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla BF Survey Pro Free SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla BF Survey Pro SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla BNF SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Bamboo Simpla Admin Template SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla BazaarBuilder Shopping Cart SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Beamospetition SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Bearleague SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Beeheard Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Bidding SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Biitatemplateshop SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Billy Portfolio 1.1.2 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Biographies SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Book Joomlas 0.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Book Library SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Bookflip SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Br SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Bridge Of Hope SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Budget Magic SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Business SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CA SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CB SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CBContact SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CBResumeBuilder SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CCInvoices SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CCNewsLetter 1.0.7 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CCNewsLetter Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CRHotels SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CSVUploader SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CX SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Calc Builder Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Calendario Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla CamelcityDB 2.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Camelcitydb2 2.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Camp SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Caproductprices SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Car Component SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Car SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Casino SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Catalogue SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Category Component SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ChronoConnectivity Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla City Portal Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Clan Members SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Clan SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Clanlist SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Clantools 1.5 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Classified SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Classifieds SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Client SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Club Manager SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Cmotour SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Color SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Commedia 3.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Community Exchange SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Community SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Comp SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Competitions SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Competitions SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Contact Form Maker 1.0.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Content Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ContentBlogList SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Controller SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Contushdvideoshare SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Countries SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Cream SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Crowdsource SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Customers Who Bought SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla DHForum SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla DJ Classifieds Extension 2.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla DM Orders SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla DMS SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla DateConverter SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Departments SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Digifolio 1.52 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Digistore Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Digistore SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Directory Tree SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Dirfrm SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Discussions SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Docman SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla DonateProcess 0.8.5 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Doqment SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Dshop SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Dtregister SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla EQ Event Calendar SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla EZ Autos SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla EZ Realty 5.3.0 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Easy Youtube Gallery 1.0.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Education SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Elite Experts SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Enmasse SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Equipment SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Erotik SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Eslamiat SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Estate Agent SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Event Manager Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Event SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Eventcal 1.6.4 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Exams 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Expedition SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Extcalendar Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Extensions 1.6.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Extion IF Portfolio Nexus SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Fabrik SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Facebook SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Family SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Fastball SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Fireboard SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Firmy SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Flash 1.0.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Flash Magazine Deluxe SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla FlashMagazineDeluxe Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Flipwall SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Foobla Suggestions SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Football SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Forme Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Foto SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Freestyle FAQ 1.5.6 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Freestyle FAQ Lite 1.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Freestyle Support 1.9 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Full SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla G Calendar 1.1.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla GBU Facebook SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla GDS SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla GM Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla GSTicketSystem Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gallery WD SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gambling SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gamesbox 1.0.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gameserver 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gameserver 1.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gantry Framework 3.0.10 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Genetorder SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gift Exchange SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gigfe SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Girls SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Global SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla GolfCourseGuide SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Grants SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Groups Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Guide SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Gurujibook SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla HD FLV 2.1.0.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla HDFlvPlayer SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla HDVideoShare SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Hello SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla HezaContent 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Horses SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Hospital SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Hot Brackets Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla HuruHelpDesk SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla IDOBlog 1.1b30 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla IT SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ITArmory SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla IXXO Cart SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ice Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ifbanner1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ignite Gallery 0.8.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ignite Gallery 0.8.3.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Images SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Include SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Inneradmission SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla IotaPhotoGallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Items SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla J-Projects Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JBDiary Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JBPublishdownfp SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JBook Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JBounceback SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JCal Pro Calendar SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JCommunity SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JDirectory SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JDrugsTopics SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Ajax Event Calendar SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Ajax SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Auto 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Directory SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Event Calendar SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE FAQ Pro Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Job 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Job SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Poll SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Quiz Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JE Story 1.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JEvents 1.5.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JGen 0.9.33 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JLinks SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JMarket SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JNews SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JNewsletter SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JP Jobs SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JPhoto SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JPodium SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JPodium SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JQuarks4s 1.0.0 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JReservation 1.5 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JS Jobs 1.0.5.6 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JS Jobs 1.0.5.8 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JShop SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JStore SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JSubscription SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JSupport 1.5.6 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JTM Reseller 1.9 Beta SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JTickets SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JUser SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JV Comment 3.0.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JVideo 0.3.x SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JVideoClip Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jcars SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jeajaxeventcalendar Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jeema Article Collection SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jeformcr SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jembed Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jesectionfinder SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jeux 1.0.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jinc SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jiptracker SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jlord RSS SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jnewspaper SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joaktree 1.1.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Job SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Job SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jobline 1.3.1 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jobprofile SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jobs Pro Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joltcard SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jomestate 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jomtube SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JooDatabase SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla JoomPortfolio Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joomanager SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joomclip SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joomdle 0.24 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joomloads SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joomloc SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joomlub SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Joomnik SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jsjobs Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Juicy SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jumi Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Jvehicles SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla K2 1.0.1b SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla KK SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla KKContent Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Kbase 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla King Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Komento SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Konsultasi SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla KsAdvertiser SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Kunena 1.5.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Kunena Forums SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Lead SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Leader SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Lesson SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Libros SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Live Ticket Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Low Cost Hotels Component SQL Injection Exploit
+		['exploit', 'remote', 'sql injection']
+	Joomla LucyGames SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Lyftenbloggie SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Machine SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Maian Media SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Maian Music 1.2.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla MailTo SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Main SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Manager 1.5.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Maplocator SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Markt SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Matrimony SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Mealmenu SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Media Alert SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Media Mall Factory 1.0.4 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Menu SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Minitek FAQ Book 1.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla MisterEstate SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Mobile SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Mochigames SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Model SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Momres Component SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Morfeoshow SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Motor SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Movm 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Multi-Venue Restaurant Menu Manager SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Music Gallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla MyDynGallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla MyGarage SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla MyTube SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Myhome SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla NA News Description Component SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla NFN Address Book SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla NFN Address Book SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla NKC 2.0.b Beta SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla NeoRecruit SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Neorecruit 1.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Network SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla News Component SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla NewsFeeds SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Newspaper SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Newssearch SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Nice Ajax Poll 1.3.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Nice Ajax Poll 1.4.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ninja Component 1.x SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Odudeprofile 2.x SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla OnGallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ops SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Org SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ornekek SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Otzivi Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ownbiblio 1.5.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ozio Gallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla PC Cookbook Component Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla PMS Component 2.0.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Package SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Packages SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Pandafminigames SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Papers SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Parallax CK SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Parcoauto SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Party SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla PaxGallery Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla PaymentsPlus Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla People 1.0.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Perchagallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Personal SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Personel Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Phocadownload Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Photo Blog SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Photo SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Photoblog Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Photos 1.0.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Pinboard SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ponygallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Portafolio SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Portfol SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Portfolio Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Press Release SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Press SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Pricelist 3.2.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Productbook SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Products SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Properties SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Property Lab SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Propertylab SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla QContacts 1.0.6 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla QContacts SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla QPersonal SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla QPersonel SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Question SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Quick News SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla QuickFAQ Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Quran SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RD Download SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RD-Autos 1.5.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RSGallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RSGallery2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RSfiles SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Races Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Radio SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Random Article SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ranking SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Rapid Recipe SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Realtyna SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Recerca SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RedShop 1.0.23.1 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Redshop 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Regional Booking Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Remository SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Resource SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Restaurants SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RokModule 1.1 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla RokModule Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Route SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla SOBI2 2.9.3.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla SPA SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla SQL Report Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sanpham SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sar News SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Scatalog 2.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla School Component 1.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Schools SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Science SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Searchlog 3.1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla SectionEx 2.5.96 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Seek SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Seminar Component 1.28 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Serie SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sermon Speaker SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sexy Polling 1.0.8 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sexy SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Seyret Video Component Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sgicatalog SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Shop SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Shop SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Siirler 1.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Simple FAQ Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Simple Review Component SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla SimpleShop SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Slideshow SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Social User List SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Soft SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Software SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Solution SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Soundset 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spain SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spec SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Speech SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider 2.8.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider Calendar 3.2.6 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider Calendar Lite SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider Catalog SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider Contacts 1.3.6 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider FAQ SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider Form Maker 3.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Spider Random Article SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sponsorwall SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Sport Fusion 0.2.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Start SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla State SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla StaticXT SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Store Directory SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Subcategory 1.2.15 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Survey Manager 1.5.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Szallasok SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla TP Jobs SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla TPDugg 1.1 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla TTVideo 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Table SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tag SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tariff SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tax SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Teacher SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Team SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tech Article SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Techfolio 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Television SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tennis Ladders Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla The Estate Agent SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tickets 2.1 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Time Returns SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Topmenu SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Toppinnovators SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tour SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Trading Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tree SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Tsonymf SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Units SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Upcoming News SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Videos 1.0.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla VirtualMoney SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla VirtueMart 1.1.6 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Virtuemart 1.1.4 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Virtuemart 2.0.22a SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Virtuemart SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Voj SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Volunteer 2.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla WMTPic SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Wallpapers SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Weblinks SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Wire Immogest SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Wrapper SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla X-Shop SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla XBall SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla XOBBIX 1.0.x SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Xeslidegalf SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Xeyougallery SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Xmap 1.2.11 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Xmap SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Ybggal 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Yellowpages SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Yelp SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Youtube Gallery 4.1.7 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Youtube SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla ZCalendar Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Zelig SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla Zoom Portfolio SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla allCineVid 1.0.0 Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla com_gigcal SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla com_ircmbasic SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla com_jashowcase SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla com_newsflash SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla com_pcchess Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla com_waticketsystem Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla com_xevidmegahd SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla dcsFlashGames SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla djfacl SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla gigCalendar 1.0 SQL Injection gigcal_bands_id
+		['exploit', 'remote', 'sql injection']
+	Joomla gigCalender 1.0 SQL Injection gigcal_venues_id
+		['exploit', 'remote', 'sql injection']
+	Joomla iJoomla RSS Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla iProperty 1.5.3 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla jVideoDirect Blind SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla mad4joomla SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla mdigg SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla redSHOP 1.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Joomla! Joaktree 1.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Mambo / Joomla HeXimage 2.1.2 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	Mambo / Joomla Tupinambis SQL Injection
+		['exploit', 'remote', 'sql injection']
+	TNR Enhanced Joomla Search 3.0.0 SQL Injection
+		['exploit', 'remote', 'sql injection']
+	adv86-K-159-2007.txt
+		['exploit', 'remote', 'sql injection']
+	jcpf-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomla15-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaacajoom-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaako-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaasortyment-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaasortymentkat-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaawesom-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlabea-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlabible-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlabibtext-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlablog-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlabooks-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlabrightcode-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacandle-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacatalog-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacatalogprod-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacategory-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacinema-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaclasifier-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacms-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacomact-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlacontact-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlad3000-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomladatso-blindsql.txt
+		['exploit', 'remote', 'sql injection']
+	joomladatso-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomladetail-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomladownloads-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlads-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomladtr-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaeasy-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaemcompose-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaequotes-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaestate-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaez-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlafacile-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlafaq-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlafilebase-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlafoevpart-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaform-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlafq-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlagaleria-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlagarys-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlagenealogy-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlageoboerse-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlahello-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlahotspots-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlahwdvideo-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaidoblog-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaidvnews-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaiig-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlainter-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlajabode-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlajb2-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlajmovies-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlajokes-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlajooget-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlajoomradio-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlajoomtracker-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlalexikon-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlalistoff-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamag-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamamml-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamarket-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamarketplace-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamcquiz-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamodel-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamosdir-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamost-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamyalbum-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamydyn-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamygal-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlamygallery-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaneo-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlanewsletter-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaomni-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlapaxx-sq.txt
+		['exploit', 'remote', 'sql injection']
+	joomlapccook-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaprayer-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaprodshow-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaproduct-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaprofile-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlapuarcade-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlapub-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaquicktime-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaquiz-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlarapid-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlarapidrec-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlarecipes-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlareferenzen-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlarest-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaricette-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlasales-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlasched-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlashambo2-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlasimpleshop-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlasms-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlasq-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlastats-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlateam-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlathyme-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlavvz-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlawines-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaxfaq-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaxsstream-sql.txt
+		['exploit', 'remote', 'sql injection']
+	joomlaynews-sql.txt
+		['exploit', 'remote', 'sql injection']
+	Joomla BFSurvey Local File Inclusion
+		['exploit', 'remote', 'sql injection', 'file inclusion']
+	Joomla ArtForms 2.1b7 Remote File Inclusion
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	Joomla Components Remote File Inclusion
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	Joomla! MojoBlog Remote File Inclusion
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlachrono-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlaclickheat101-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlacom-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlafeederator-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlaflup-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlajcon-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlarecly-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	mj-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+	joomlaclickheat-rfi.txt
+		['exploit', 'remote', 'vulnerability', 'code execution', 'xss', 'file inclusion']
+	Joomla Amblog 1.0 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Answers 2.3beta SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Appointinator 1.0.1 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Art Portal SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Biblioteca 1.0 Beta SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Boy Scout Advancement 0.3 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla DS-Syndicate SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla ECommerce-WD 1.2.5 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Fantasytournament SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla ICAgenda SQL Injection / Path Disclosure
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla J2Store 3.1.6 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla JoomlaConnect_be SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Kunena Forum 3.0.5 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Live Chat SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla PBBooking 1.0.4_3 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla PhotoMap Gallery 1.6.0 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Products SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Recipe SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Spielothek 1.6.9 Blind SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla Teams SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla TimeTrack 1.2.4 SQL Injection
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	joomlaaltas-sql.txt
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	joomlais-sql.txt
+		['exploit', 'remote', 'vulnerability', 'sql injection']
+	Joomla iCagenda SQL Injection / Path Disclosure
+		['exploit', 'remote', 'vulnerability', 'sql injection', 'info disclosure']
+	Joomla rsmonials Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'file upload']
+	Joomla 1.5 Jreservation Cross Site Scripting / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla Barter Site Cross Site Scripting / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla Beamospetition 1.0.12 XSS / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla CCBoard 1.2-RC Cross Site Scripting / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla DJ Art Gallery 0.9.1 Cross Site Scripting / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla HM Community SQL Injection / Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla JFaq 1.2 SQL Injection / Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla JS Calendar 1.5.1 SQL Injection / Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla Jooproperty SQL Injection / Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla Kunena SQL Injection / Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla Listbingo 1.3 SQL Injection / Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla LiveChat 2.0 XSS / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla My Car 1.0 Cross Site Scripting / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla Quiz Cross Site Scripting / SQL Injection
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla VXDate SQL Injection / Cross Site Scripting
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection']
+	Joomla ArtForms 2.1b7.2 RC2 Cross Site Scripting / SQL Injection / Directory Traversal
+		['exploit', 'remote', 'vulnerability', 'xss', 'sql injection', 'file inclusion']
+	Joomla Component JCE File Upload Remote Code Execution
+		['exploit', 'remote', 'web', 'arbitrary', 'php']
+	Janissaries Joomla Civicrm Shell Upload
+		['exploit', 'shell']
+	Joomla ArticleMan Shell Upload
+		['exploit', 'shell']
+	Joomla Facileforms Shell Upload
+		['exploit', 'shell']
+	Joomla Free Consultation Shell Upload
+		['exploit', 'shell']
+	Joomla JE Messenger 1.0 Shell Upload
+		['exploit', 'shell']
+	Joomla JFUploader Shell Upload
+		['exploit', 'shell']
+	Joomla Jesubmit Shell Upload
+		['exploit', 'shell']
+	Joomla Joomlisting Shell Upload
+		['exploit', 'shell']
+	Joomla Jsjobs Shell Upload
+		['exploit', 'shell']
+	Joomla Mosets Tree 2.1.5 Shell Upload
+		['exploit', 'shell']
+	Joomla Uploader Shell Upload
+		['exploit', 'shell']
+	Joomla jDownloads 1.0 Shell Upload
+		['exploit', 'shell']
+	Joomla File Uploader Shell Upload
+		['exploit', 'shell', 'file upload']
+	Joomla NoNumber Framework Local File Inclusion / Shell Upload
+		['exploit', 'shell', 'local', 'vulnerability', 'file inclusion']
+	Joomla JCE 2.0.10 Shell Upload
+		['exploit', 'shell', 'perl', 'php']
+	Joomla cgTestimonial 2.2 Cross Site Scripting / Shell Upload
+		['exploit', 'shell', 'vulnerability', 'xss']
+	Joomla 1.5 VirtueMart 1.1.7 Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla 3.2.1 SQL Injection
+		['exploit', 'sql injection']
+	Joomla AgoraGroup 0.3.5.3 SQL Injection
+		['exploit', 'sql injection']
+	Joomla All Hotels Component Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla ChronoForms Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla Eventing 1.6.x Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla HBS Search Component SQL Injection
+		['exploit', 'sql injection']
+	Joomla Ice Gallery Component 0.5b2 Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla JFusion Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla Live Ticket Component 1.0 SQL Injection
+		['exploit', 'sql injection']
+	Joomla Low Cost Hotels Component Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla NA Content Component 1.0 SQL Injection
+		['exploit', 'sql injection']
+	Joomla PAX Gallery Component 0.1 Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla Time Based SQL Injection
+		['exploit', 'sql injection']
+	Joomla Top Hotel Module SQL Injection
+		['exploit', 'sql injection']
+	Joomla Turtushout 0.11 SQL Injection
+		['exploit', 'sql injection']
+	Joomla iJoomla Archive SQL Injection
+		['exploit', 'sql injection']
+	Joomla mdigg Component 2.2.8 Blind SQL Injection
+		['exploit', 'sql injection']
+	Joomla mdigg Component 2.2.8 SQL Injection
+		['exploit', 'sql injection']
+	ijoomla-blindsql.txt
+		['exploit', 'sql injection']
+	joomalaneorecruit-sql.txt
+		['exploit', 'sql injection']
+	joomla-gmaps-sql.txt
+		['exploit', 'sql injection']
+	joomla-sql.txt
+		['exploit', 'sql injection']
+	joomla15-blindsql.txt
+		['exploit', 'sql injection']
+	joomlaacctexp-sql.txt
+		['exploit', 'sql injection']
+	joomlaactualite-sql.txt
+		['exploit', 'sql injection']
+	joomlaalpha-blindsql.txt
+		['exploit', 'sql injection']
+	joomlaalphacon-sql.txt
+		['exploit', 'sql injection']
+	joomlacommon-sql.txt
+		['exploit', 'sql injection']
+	joomlacontent-sql.txt
+		['exploit', 'sql injection']
+	joomladate-sql.txt
+		['exploit', 'sql injection']
+	joomlaeventlist-sql.txt
+		['exploit', 'sql injection']
+	joomlaexp-sql.txt
+		['exploit', 'sql injection']
+	joomlaextplorer-sql.txt
+		['exploit', 'sql injection']
+	joomlaflipping-sql.txt
+		['exploit', 'sql injection']
+	joomlafootball-sql.txt
+		['exploit', 'sql injection']
+	joomlagal-sql.txt
+		['exploit', 'sql injection']
+	joomlagameq-sql.txt
+		['exploit', 'sql injection']
+	joomlaiomezun-sql.txt
+		['exploit', 'sql injection']
+	joomlajoobb-sql.txt
+		['exploit', 'sql injection']
+	joomlajooblog-sql.txt
+		['exploit', 'sql injection']
+	joomlajoovideo-sql.txt
+		['exploit', 'sql injection']
+	joomlajotloader-sql.txt
+		['exploit', 'sql injection']
+	joomlajpad-sql.txt
+		['exploit', 'sql injection']
+	joomlalms-sql.txt
+		['exploit', 'sql injection']
+	joomlamycontent-sql.txt
+		['exploit', 'sql injection']
+	joomlaneogal-sql.txt
+		['exploit', 'sql injection']
+	joomlanetinvoice-sql.txt
+		['exploit', 'sql injection']
+	joomlanforms-sql.txt
+		['exploit', 'sql injection']
+	joomlanicetalk-sql.txt
+		['exploit', 'sql injection']
+	joomlaokul-sql.txt
+		['exploit', 'sql injection']
+	joomlapaxx-blindsql.txt
+		['exploit', 'sql injection']
+	joomlapcchess-sql.txt
+		['exploit', 'sql injection']
+	joomlaplayers-sql.txt
+		['exploit', 'sql injection']
+	joomlaprofiler-sql.txt
+		['exploit', 'sql injection']
+	joomlapuarcade22-sql.txt
+		['exploit', 'sql injection']
+	joomlarekry-sql.txt
+		['exploit', 'sql injection']
+	joomlasimple-sql.txt
+		['exploit', 'sql injection']
+	joomlaversioning-sql.txt
+		['exploit', 'sql injection']
+	joomlawebhost-sql.txt
+		['exploit', 'sql injection']
+	joomlawebtv-sql.txt
+		['exploit', 'sql injection']
+	joomlayanc-sql.txt
+		['exploit', 'sql injection']
+	joomlayvcom-sql.txt
+		['exploit', 'sql injection']
+	mamboquran-sql.txt
+		['exploit', 'sql injection']
+	JSN PowerAdmin 2.3.0 Code Exection / CSRF / XSS
+		['exploit', 'vulnerability', 'code execution', 'xss', 'csrf']
+	joomla1013-csrf.txt
+		['exploit', 'vulnerability', 'csrf']
+	Joomla JCE 2.0.10 Path Traversal / Path Manipulation
+		['exploit', 'vulnerability', 'file inclusion']
+	Joomla Casino 0.3.1 SQL Injection
+		['exploit', 'vulnerability', 'sql injection']
+	Joomla Clantools 1.2.3 Blind SQL Injection
+		['exploit', 'vulnerability', 'sql injection']
+	Joomla DJ Catalog SQL Injection
+		['exploit', 'vulnerability', 'sql injection']
+	joomla150beta-sql.txt
+		['exploit', 'vulnerability', 'sql injection']
+	Joomla 1.5.17 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla 1.5.22 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla 1.6.0 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla 2.5.6 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla 3D Cloud Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla Competitions Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla Freichat Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla JM-Recommend Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla JVClouds3D Cross Site Scripting / HTML Injection
+		['exploit', 'vulnerability', 'xss']
+	Joomla JoomLeague 2.1.12 XSS / XML Injection
+		['exploit', 'vulnerability', 'xss']
+	Joomla Kunena Forum 3.0.5 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla Multi Calendar 4.0.2 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla RSComments 1.0.0 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla Trabalhe Conosco Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla YOOOtheme Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla nBill Lite Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla! 1.5.10 JA_Purity Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla! 1.6.3 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	Joomla! 1.7.0 Cross Site Scripting
+		['exploit', 'vulnerability', 'xss']
+	MijoSearch 2.0.1 Cross Site Scripting / Exposure
+		['exploit', 'vulnerability', 'xss']
+	joomlaMamboXSS.txt
+		['exploit', 'vulnerability', 'xss']
+	joomlaxplorer-xsstraverse.txt
+		['exploit', 'vulnerability', 'xss', 'file inclusion']
+	Joomla Almond Classifieds 7.5 SQL Injection / XSS
+		['exploit', 'vulnerability', 'xss', 'sql injection']
+	Joomla Hotel Booking System XSS / SQL Injection
+		['exploit', 'vulnerability', 'xss', 'sql injection']
+	Joomla Web TV Local File Inclusion
+		['exploit', 'web', 'local', 'file inclusion']
+	Joomla Multiple Cross Site Scripting Issues
+		['exploit', 'web', 'vulnerability', 'xss']
+	CiviCRM 3.3.3 Drupal-Joomla Cross Site Scripting
+		['exploit', 'xss']
+	JW Player / SVFP / Poodll / RokBox Cross Site Scripting
+		['exploit', 'xss']
+	Joomla 1.0.15 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla 1.5.26 ja_purity Cross Site Scripting
+		['exploit', 'xss']
+	Joomla 1.6.0-Alpha2 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla 2.5.3 Host Header Cross Site Scripting
+		['exploit', 'xss']
+	Joomla 2.5.4 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla 3.2.2 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla 3D User Cloud Cross Site Scripting
+		['exploit', 'xss']
+	Joomla ALFContact 1.9.3 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla AWD Song Cross Site Scripting
+		['exploit', 'xss']
+	Joomla AceSearch 3.0 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Aclassif Cross Site Scripting
+		['exploit', 'xss']
+	Joomla ActiveHelper LiveHelp 2.0.3 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Artist Avenue Cross Site Scripting
+		['exploit', 'xss']
+	Joomla BC Cross Site Scripting
+		['exploit', 'xss']
+	Joomla BCAccount Cross Site Scripting
+		['exploit', 'xss']
+	Joomla BeaconDecode Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Beatz 1.x Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Bookmarks Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Btg_Oglas Cross Site Scripting
+		['exploit', 'xss']
+	Joomla CMS Realty Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Card View JX Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Carman Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Community Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Comprofiler Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Currency Converter Cross Site Scripting
+		['exploit', 'xss']
+	Joomla D-Greinar Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Djice Shoutbox 1.0 XSS
+		['exploit', 'xss']
+	Joomla EWriting Cross Site Scripting
+		['exploit', 'xss']
+	Joomla EasyBlog Cross Site Scripting
+		['exploit', 'xss']
+	Joomla EasyGB Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Eventbooking Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Extcalendar Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Facile Forms Cross Site Scripting
+		['exploit', 'xss']
+	Joomla GoogleSearch (CSE) 3.0.2 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Health / Fitness Stats Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Hotproperty Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Imoti Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Incapsula 1.4.6_b Cross Site Scripting
+		['exploit', 'xss']
+	Joomla JC - Top 25 Movie Trailers Cross Site Scripting
+		['exploit', 'xss']
+	Joomla JComments 2.10.0 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla JDownloads Cross Site Scripting
+		['exploit', 'xss']
+	Joomla JEvents Cross Site Scripting
+		['exploit', 'xss']
+	Joomla JSupport 1.5.6 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Jnews 8.0.1 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Job Line Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Jobads Cross Site Scripting
+		['exploit', 'xss']
+	Joomla JomSocial 1.6.288 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Jombib Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Joomdocs Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Komento 1.7.2 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Komento Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Kunena 3.0.4 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Lyftenbloggie Cross Site Scripting
+		['exploit', 'xss']
+	Joomla MGM Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Marketplace 1.2 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Melody Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Mosforms Cross Site Scripting
+		['exploit', 'xss']
+	Joomla News / Article / Content / Event Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Noticia Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Oprykningspoint Mc Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Pbbooking 2.4 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Phocagallery 3.0.0 / 4.0.0 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Product Cross Site Scripting
+		['exploit', 'xss']
+	Joomla QPersonel Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Rapid Recipe Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Reservations Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Resman Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Rokin Cross Site Scripting
+		['exploit', 'xss']
+	Joomla SMF Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Simple Email Form 1.8.5 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla StaticXT Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Store Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Super Messenger Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Table JX Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Tienda Cross Site Scripting
+		['exploit', 'xss']
+	Joomla VideoWhisper 2 Way Video Chat Cross Site Scripting
+		['exploit', 'xss']
+	Joomla WebcamXP Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Wrapper Cross Site Scripting
+		['exploit', 'xss']
+	Joomla Youtube Gallery 3.4.0 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla eXtplorer 2.1.3 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla iCagenda 3.5.15 Cross Site Scripting
+		['exploit', 'xss']
+	Joomla! 1.5 / 1.6 JFilterinput Cross Site Scripting Bypass
+		['exploit', 'xss']
+	Joomla! 1.7.0-RC / 1.6.x Cross Site Scripting
+		['exploit', 'xss']
+	Joomla! CMS 3.4.3 Cross Site Scripting
+		['exploit', 'xss']
+	Joomulus Cross Site Scripting
+		['exploit', 'xss']
+	Xorbin Analog Flash Clock 1.0 For Joomla XSS
+		['exploit', 'xss']
+	Joomla 1.6.3 Cross Site Request Forgery
+		['exploit', 'xss', 'csrf']
+	CryptoPHP - Analysis Of A Hidden Threat Inside Popular Content Management Systems
+		['paper']
+	Guidelines For Pen-Testing A Joomla Based Site
+		['paper']
+	The Joomla Hacking Compendium
+		['paper']
+	Joomla Remote File Inclusion Paper
+		['paper', 'remote', 'vulnerability', 'code execution', 'file inclusion']
+

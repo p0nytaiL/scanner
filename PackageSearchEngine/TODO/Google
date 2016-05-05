@@ -1,0 +1,126 @@
+about google hacking
+
+	基本功能
+	intitle/allintitle
+
+	inurl/allinurl
+
+	intext/allintext
+
+	site
+
+	filetype
+
+	link
+		搜索链接到当前站点的页面
+
+	related
+		搜索与当前站点相似的页面
+
+	组合以上用能可用于检索出以下开放信息：
+
+	记录漏洞类型的检索：
+		文件包含
+		SQL注入
+		上传
+		已存在的webshell
+
+	基于服务的检索
+
+		非80端口检索(可能包含敏感服务)：
+			inurl:https
+			inurl:8080
+
+		弱点服务搜索：
+			tomcat:	inurl:Apache Tomecat
+			jboss，glassfish，
+
+
+		远程访问服务搜索：
+			vpn,VNC，pcanywhere,remote desktop,
+
+		管理服务搜索：
+			数据库管理
+				phpmyadmin
+			源代码管理
+				svn,git
+			项目管理
+				jenkens
+			站点后台管理
+				admin，system路径
+
+		“开放服务”：
+			webservice [axis2, asmx, wsdl]
+
+
+
+	基于目录检索：
+		开放目录：
+			index of
+			to parent directory
+			.bash_history
+
+	基于文件的检索：
+		调试信息文件：
+			phpinfo.php
+			test.php
+			debug.php
+
+		错误信息：
+			error
+			mysql ：
+				"access denied for user",
+				"using password",
+				"Warning: mysql_fetch_array()"
+		敏感文件：
+			文档文件：
+				.doc
+				.pdf
+				.xls
+			配置文件，
+				.htaccess
+				.xml
+				.conf
+				.pwd
+				.sql
+			服务文件
+				.asmx
+			数据库文件
+				.mdb
+				.dat
+			压缩包
+				.zip
+				.rar
+				.7z
+				.tar
+			日志
+				.log
+				.logs
+				.trace
+			报表
+				.rpt
+			备份
+				.bak
+
+	参考http://johnny.ihackstuff.com/ghdb/做进一步归纳
+	参考工具
+		Wikto 2.0
+		SiteDigger 2.0
+
+		Alt-Google
+		Google-蜘蛛
+		Google Hack V2.0
+
+爬虫无法处理的
+	站点
+		robots.txt文件
+	页面
+		<meta name="robots" content="noindex">
+		<meta name="robots" content="noarchive">
+		<meta name="robots" content="nofollow">
+
+	遇到此类站点，可以采用暴破路径，文件等方式进行信息收集。
+
+
+
+http://www.cnblogs.com/hrhguanli/p/3816070.html
