@@ -46,7 +46,7 @@ class BingResponse(HTTPBodyResponse):
 class BingResponseLinks(BingResponse):
     def __init__(self, body, encoding):
         HTTPBodyResponse.__init__(self, body, encoding)
-        self.bool_raw = False
+        self.bool_raw = True
 
     def extractResults(self):
         results = []

@@ -59,6 +59,7 @@ class FindHTTPServer(Scanner_v1):
         self._outputFormatters.append(OutputFormatterFileHTTPServer1())
 
     def createJobs(self,targets):
+        print 'Scan Range: %s(network) - %s(broadcast)' % (str(targets.network), str(targets.broadcast))
         for index1, port in enumerate(self._ports):
             for index2, ip in enumerate(targets):
                 if targets.size > 1 and ip in [targets.network, targets.broadcast]:
