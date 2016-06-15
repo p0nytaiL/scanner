@@ -168,6 +168,15 @@ class OutputFormatterFileHTTPServer(OutputFormatterFile):
 import requests
 from PackageHTTP.Body import HTTPBodyResponse
 
+def get_encoding(response):
+    encoding = ''
+    encodings = requests.utils.get_encodings_from_content(response.content)
+    if encodings:
+        encoding = encodings[0]
+    else:
+        encoding = response.apparent_encoding
+    return encoding
+
 class OutputFormatterConsoleHTTPServer1(OutputFormatterConsoleHTTPServer):
     def __init__(self):
         OutputFormatterConsoleHTTPServer.__init__(self)
@@ -176,7 +185,7 @@ class OutputFormatterConsoleHTTPServer1(OutputFormatterConsoleHTTPServer):
         response = job.result['response_get']
 
         if isinstance(response,requests.Response):
-            body = HTTPBodyResponse(response.content, response.apparent_encoding)
+            body = HTTPBodyResponse(response.content, get_encoding(response))
             print  '\r',job.description, '\t'*6, body.title
 
 
@@ -245,7 +254,8 @@ class OutputFormatterFileHTTPServer1(OutputFormatterFileHTTPServer):
             response_curr = job.result['response_get']
             self._fileHandle.write('<td>')
             try:
-                body = HTTPBodyResponse(response_curr.content, response_curr.apparent_encoding)
+                #body = HTTPBodyResponse(response_curr.content, response_curr.apparent_encoding)
+                body = HTTPBodyResponse(response_curr.content, get_encoding(response_curr))
                 self._fileHandle.write(body.title)
                 #pass
             except Exception as e:

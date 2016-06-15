@@ -30,7 +30,7 @@ httpd.conf
 
 上传shell到download目录下
 /service/extension/clientUploader/upload
-
+with cookie: ZM_ADMIN_AUTH_TOKEN
 
 获取authtoken获取方式
     读取ldap root账户,通过soap接口添加管理员账户

@@ -28,7 +28,7 @@ class Scanner_v1:
                 self._description = str(targets)
 
             print 'Scan Job %s with %d threads started !' % (self._description, thread_count)
-            self.createJobs(targets)
+            count = self.createJobs(targets)
 
             for outputFormatter in self._outputFormatters:
                 if self._enable_header:

@@ -27,8 +27,12 @@ class Progress:
     def __init__(self):
         self._index = 0
         self._total = 0
+        self._timeout = 0
+        self._finished = 0
+        self._working = 0
 
     def progress(self):
+        #return '%d/%d working:%d, timeout: %d, finished: %d' %(self._index,self._total, self._working, self._timeout, self._finished)
         return '%.2f' % ((float(self._index)/ float(self._total)) *100)
 
     def __str__(self):
@@ -86,6 +90,7 @@ class JobQueue_v1:
 
             try:
                 job = self._queueWorkingJobs.get(timeout=2)#上一时刻非空,此时并不一定非空,不加timeout可能挂起
+                self._progress._working = self._queueWorkingJobs._qsize()
                 finished_job = job.do()#job中的异常最好由job自己处理
 
                 #超时重试
@@ -99,11 +104,14 @@ class JobQueue_v1:
                 if finished_job.is_timeout and (finished_job.retry == finished_job.max_retry):
                     #print "无效任务"
                     self._queueTimeoutJobs.put(finished_job)
+                    self._progress._timeout = self._queueTimeoutJobs._qsize()
                     #continue
 
                 #无超时,加入结果队列
-                self._progress._index = self._progress._index + 1
+
                 self._queueFinishedJobs.put(finished_job)
+                self._progress._finished = self._queueFinishedJobs._qsize()
+                self._progress._index = self._progress._index + 1
 
             except Queue.Empty as e:
                 continue
