@@ -1,0 +1,141 @@
+
+http://www.webdav.org/
+
+HTTP1.1标准方法
+GET，HEAD，POST，PUT，DELETE，OPTONS，TRACE，CONNECT
+
+WebDAV扩展
+LOCK，UNLOCK，（overwrite protection）
+PROPFIND，PROPPATCH（metadata management），
+COPY，MOVE，MKCOL（namespace management）
+
+DeltaV扩展
+	Adding Versioning to the web
+	Versioning Extersion to WebDAV
+	mod_webdav_svn
+扩充了11种方法
+
+CHECKIN，CHECKOUT，UNCHECKOUT，
+VERSION-CONTROL,
+REPORT，UPDATE，LABEL，MERGE，MKWORKSPACE，
+BASELIE-CONTROL，MKACRIVITY
+
+
+WebDAV扩展包含，众多的标准，众多的HTTP扩展方法，众多的实现版本。
+
+How does it work?
+
+	基于HTTP／1.1，进行扩展
+	新的HTTP头与方法，对现有方法的语法进行扩充
+
+	新增加的HTTP头：
+	DAV，If，Depth，Overwrite，Destination，Lock－Token，Timeout，Status－URI
+
+namespace management
+
+	COPY，MOVE：对资源进行拷贝／移动
+		Depth，Destination，Overwrite
+
+	MKCOL：创建集合
+
+metadata management
+	PROPFIND：获取资源的属性
+	可以列举目录
+
+	PROPPATCH：对单个资源的属性进行设置，修改，删除
+
+overwrite protection
+	LOCK，UNLOCK：对资源进行锁定与解锁
+	Lock-Token
+常规打法
+	XXE
+	OPTIONS请求
+	RFC中提到的安全部分，以及敏感的扩展方法
+	代码审计
+
+CVE
+IIS6.0及其以下版本中的WebDAV实现对Unicode字符的解码存在缺陷，可通过构造Unicode字符绕过验证，访问目录。
+https://www.exploit-db.com/exploits/8704/
+https://blog.skullsecurity.org/2009/webdav-detection-vulnerability-checking-and-exploitation
+（patch一个webdav客户端cadaver，用于访问存在漏洞的IIS服务器）
+
+
+XXE
+	WebDAV扩展方法中支持XML输入的方法
+	PROPPATCH，PROPFIND，LOCK等（如何构造XXE？）
+
+	一些Java实现的WebDAV存在问题。
+
+
+	Milton WebDAV XXE（一个Java实现的WebDAV）
+		CVE-2015-7326
+
+	Apache Jacrabbit WebDAV XXE（Jacrabbit： 公共，标准的内容仓库接口标准）
+		CVE-2015-1833
+
+
+	Apache Sling OOXML parsing XXE
+
+		Apache Tika OSGi bundle to parse documents
+		Apache POI is used to parse OOXML documents
+		Apahce POI library XXE
+
+		Sling：
+			Java平台上的一个开源web应用程序框架，用于创建以JSR-170为标准的面向内容			的应用。
+
+		OOXML：
+			OOXML全称是Office Open XML，OOXML是由微软公 司为Office 2007产品			开发的技术规范，现已成为国际文档格式标准，兼容前国际标准ODF（Open Document 			Format）和中国文档标准UOF（Unified Office document Format）
+
+
+		Apache Tika ：
+			Apache Tika 文档内容提取框架，开发语言Java。附带多种数据源提取工具，语言识		别工具等。
+		http://www.ibm.com/developerworks/cn/opensource/tutorials/os-apache-tika/index.html
+
+
+
+		OSGi（Open Service Gateway Initiative）：
+			轻巧的、松耦合的、面向服务的应用程序开发框架。
+
+			在OSGI框架中是采用Bundle的方式来组织和部署系统的
+
+			开源OSGI框架：
+				Equinox
+				Knopflerfish
+				Felix
+			可整合一些现有的开源框架（Spring）Spring-DM
+使用 Equinox 开发 OSGi 应用程序
+利用 Eclipse 开发基于 OSGi 的 Bundle 应用
+
+
+
+
+		Apache POI（poor obfuscation implementation）：
+			为Java应用提供读写Microsoft Office文档的功能
+
+Apache Jackrabbit WebDAV CSRF
+	漏洞成因：
+	处理请求的servlet中将POST请求当成PUT请求来处理。doPost方法直接调用doPut。
+	其AntiCSRF的处理只是简单的对Referer进行判断。当Referer为空时，可以直接bypass
+	构造一个Post表单，欺骗用户点击，可导致任意文件上传，直接导致getshell。
+	https://issues.apache.org/jira/browse/JCR-3909
+
+
+
+Milton WebDAV AUTH bypass
+	漏洞成因：
+	验证后的信息保存在Cookie中。
+	Cookie文件存放在默认路径java.io.tmp的keys.txt文件中。
+	MOVE与COPY方法存在路径遍历漏洞（Destination头）。
+	可导致keys.txt文件被覆盖。
+	构造对应cookie获取WebDAV访问权限。
+
+
+
+WebDAV提供的扩展HTTP方法，方法了针对HTTP服务器的攻击面
+配置不当或者WebDAV本身的实现存在问题。
+WebDAV相关的RFC文档中都有给出一些安全实现的准则。但大部分的WebDAV实现都没够严格遵守RFC提供的标准。
+绝大多数Java实现的WebDAV都是存在隐患的，因为Java中提供的 XML解析器的默认配置都是存在弱点的：允许DTD，允许外部资源访问。
+
+
+
+https://evertpot.com/167/

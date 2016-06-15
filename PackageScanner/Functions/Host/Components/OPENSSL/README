@@ -1,0 +1,35 @@
+openssl
+
+https://www.openssl.org/source/
+
+版本
+1.0.2版本
+	当前稳定版（支持到2019年11月31日）
+1.0.1版本
+	不再更新，只针对bug进行修复（支持到2016年11月31日）
+
+1.1.0beta版本
+
+0.9.8/1.0.0版本
+	不提供支持
+
+Transport Layer Security（TLS v1）
+Secure Socket Layey	（SSL v2/v3）
+OpenSSL是SSL协议个一个开源实现
+
+OpenSSL上曝出的漏洞会影响所有基于OpenSSL上的应用
+例如：
+	邮件服务（SMTP，POP，IMAP）
+	即时消息服务（XMPP）
+	VPN服务（SSL VPN）
+
+
+https://www.cvedetails.com/vulnerability-list/vendor_id-217/product_id-383/opec-1/Openssl-Openssl.html
+
+OpenSSL 0.9.6d remote exploit
+
+OpenSSL Heartbleed vulnerability (CVE-2014-0160).
+OpenSSL versions 1.0.1-1.0.1f
+
+online check：
+https://filippo.io/Heartbleed/
