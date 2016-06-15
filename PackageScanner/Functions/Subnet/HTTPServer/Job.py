@@ -66,6 +66,7 @@ class HTTPHeaderJob(Job):
 
         return Job.do(self)
 
+from PackageThread.JobQueue import Job
 import requests
 from requests.packages.urllib3.exceptions import *
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)

@@ -3,6 +3,7 @@
 
 import re
 import zlib
+import requests
 from lxml import html
 
 '''
@@ -112,11 +113,42 @@ class HTTPBodyRequest(HTTPBody):
         HTTPBody.__init__(self)
 
 
+
+#http://liguangming.com/python-requests-ge-encoding-from-headers
+def get_requests_response_encoding(response):
+    encoding = ''
+    encodings = requests.utils.get_encodings_from_content(response.content)
+    if encodings:
+        encoding = encodings[0]
+    else:
+        encoding = response.apparent_encoding
+    return encoding
+
 class HTTPBodyResponse(HTTPBody):
+    def __init__(self):
+        pass
+
+
+#媒体类型数据处理
+class HTTPBodyResponseMedia(HTTPBodyResponse):
+    def __init__(self):
+        pass
+
+#文本类型数据处理
+class HTTPBodyResponseText(HTTPBodyResponse):
     def __init__(self, body, encoding):
-        HTTPBody.__init__(self)
         self.body = body
         self.encoding = encoding
+
+#XML类型数据处理
+class HTTPBodyResponseXML(HTTPBodyResponseText):
+    def __init__(self, body, encoding):
+        HTTPBodyResponseText.__init__(self, body, encoding)
+
+#HTML页面类型数据处理
+class HTTPBodyResponseHTML(HTTPBodyResponseText):
+    def __init__(self, body, encoding):
+        HTTPBodyResponseText.__init__(self, body, encoding)
         self.dom_body = None
         self._parse()
 
