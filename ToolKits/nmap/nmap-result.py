@@ -14,19 +14,7 @@ def parseNmapResult(file):
 
 
 if __name__ == '__main__':
-   files =[
-           'icmp-echo.xml','icmp-timestamp.xml',
-           'ack.xml','syn.xml',
-           'udp.xml','sctp.xml',
-           'syn21.xml',
-           'syn22.xml',
-           'syn23.xml',
-           'syn25.xml',
-           'syn53.xml',
-           'syn443.xml',
-           'syn8080.xml',
-           'ack21.xml','ack22.xml','ack23.xml','ack25.xml','ack53.xml',
-           'ack443.xml','ack8080.xml']
+   files =['PE','PP','PA','PS','PS8000-9000']
    alive_hosts = set()
    for file in files:
        alive_hosts_old = alive_hosts

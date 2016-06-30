@@ -2,11 +2,11 @@ import requests
 import urllib,urlparse
 from PackageSearchEngine.SearchEngine import SearchEngine
 from PackageHTTP.UserAgents import getRandomAgent
-from PackageHTTP.Body import HTTPBodyResponse
+from PackageHTTP.Body import HTTPBodyResponseHTML
 
-class PacketStromResponse(HTTPBodyResponse):
+class PacketStromResponse(HTTPBodyResponseHTML):
     def __init__(self, body, encoding):
-        HTTPBodyResponse.__init__(self, body, encoding)
+        HTTPBodyResponseHTML.__init__(self, body, encoding)
 
     #<a href="/files/page2/" accesskey="]">Next</a>
     @property

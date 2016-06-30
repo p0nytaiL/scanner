@@ -2,11 +2,12 @@
 #coding=utf-8
 
 
-from PackageScanner.Scanner import Scanner_v1
-from PackageThread.JobQueue import Job
-from PackageScanner.TargetLoader import TargetLoader
 from PackageScanner.Functions.DNS.Domain_v1 import FindSubDomain
+from PackageScanner.JobQueue import Job
 from PackageScanner.OutputFormatter import *
+from PackageScanner.Scanner import Scanner_v1
+from PackageScanner.TargetLoader import TargetLoader
+
 
 class OutputFormatterConsoleTargetDomain(OutputFormatterConsole):
     def __init__(self):

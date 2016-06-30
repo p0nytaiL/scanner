@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding=utf-8
 
-from PackageThread.JobQueue import Job
+from PackageScanner.JobQueue import Job
 from PackageScanner.OutputFormatter import OutputFormatter
 from PackageScanner.Scanner import Scanner_v1
 

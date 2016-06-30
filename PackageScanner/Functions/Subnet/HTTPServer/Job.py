@@ -1,8 +1,9 @@
 #!/usr/bin/python
 #coding=utf-8
 
-from PackageThread.JobQueue import Job
 from PackageHTTP.Methods import *
+from PackageScanner.JobQueue import Job
+
 
 class HTTPHeaderJob(Job):
     def __init__(self, id, hostname, port = 80):
@@ -66,7 +67,7 @@ class HTTPHeaderJob(Job):
 
         return Job.do(self)
 
-from PackageThread.JobQueue import Job
+from PackageScanner.JobQueue import Job
 import requests
 from requests.packages.urllib3.exceptions import *
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)

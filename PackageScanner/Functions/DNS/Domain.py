@@ -2,11 +2,11 @@
 #coding=utf-8
 
 import socket
-import time
-from PackageScanner.Scanner import Scanner_v1
+
+from PackageScanner.JobQueue import Job
 from PackageScanner.OutputFormatter import OutputFormatter
+from PackageScanner.Scanner import Scanner_v1
 from PackageScanner.TargetLoader import TargetLoader
-from PackageThread.JobQueue import Job
 
 #通过getaddrinfo方法获取ip地址
 #泛解析地址

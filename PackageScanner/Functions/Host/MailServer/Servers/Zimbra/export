@@ -1,0 +1,86 @@
+zimbra的邮件内容位于/opt/zimbra/store中
+目录结构很简单
+/opt/zimbra/store/0/8/
+/opt/zimbra/store/0/8/msg/
+
+
+
+每个zimbra用户都有一个id
+在store/0/目录下都能找到对照
+关于id与邮件地址的对照可以在这里找到
+https://wiki.zimbra.com/wiki/Account_mailbox_database_structure
+
+        zimbra的默认数据库为mysql，用于存储邮件头信息（To，From，Subject，Data等），联系人，日历，任务。
+        当zimbra账户创建的时候，邮件系统会系统将该账户分配到一个mailbox组，mailbox组的数据库信息存放在/opt/zimbra/db/data中，例如mboxgroup1,mboxgroup2等，最大的组id为100。
+
+        从ZCS 7开始，邮件系统哩增加了一个本地参数，用于控制zimbra备份进程，该进程周期性的执行数据库备份（zmlocalconfig -e mysql_backu_retention=<N>）
+
+        zimbra账户的mailbox组信息基于mailbox id
+        通过该命令可以获取到某个邮件账户的mailbox id（该id可以用于定位/opt/zimbra/store中的邮件）
+        zmprov getMailBoxInfo admin@admin.local
+
+        将得到的mailbox id与100求余，可得到mailbox group id，如果结果为0，则mailbox group id为100
+
+        得到mailbox group id之后，进入mysql数据库，切换到对应的数据库。
+        在mail_item表中，通过
+        	volume_id, mailbox_id, id, mod_content四个字段，可得到对应eml文件在磁盘中存储的位置
+        	opt/zimbra/store/（mailbox_id shift 12）/mailbox_id/msg/（id shift 12）/id-mod_content.msg
+
+        	mailbox_id: 5247（shift 12 → 1）
+        	id: 26001 （shift 12 → 6）
+        	mod_content: 30102
+
+        	/opt/zimbra/store/1/5247/msg/6/26001-30102.msg
+
+        select id,
+            concat('/opt/zimbra/store/', (mailbox_id >> 12), '/', mailbox_id, '/msg/',
+            (id >> 12), '/', id, '-', mod_content, '.msg') as file
+            from mail_item where mailbox_id="723" and id="261" limit 1;
+        select id,
+            concat('/opt/zimbra/store/', (mailbox_id >> 12), '/', mailbox_id, '/msg/',
+            (id - (floor(id / 1048575) * 1048575)  >> 12), '/', id, '-', mod_content, '.msg') as file
+            from mail_item where mailbox_id="723" limit 1;
+        优化过的msg存储位置查询
+        select id,
+            concat('/opt/zimbra/store/', (mailbox_id >> 12), '/', mailbox_id, '/msg/',
+            (id % (1024*1024) >> 12), '/', id, '-', mod_content, '.msg') as file
+            from mail_item where mailbox_id="723" limit 1;
+
+        	volume_id可以在zimbra.volume表中得到对应的物理路径
+        mysql> select * from zimbra.volume;
+        +----+------+----------+-------------------+-----------+-----------------+--------------+--------------------+----------------+-----------------------+
+        | id | type | name     | path              | file_bits | file_group_bits | mailbox_bits | mailbox_group_bits | compress_blobs | compression_threshold |
+        +----+------+----------+-------------------+-----------+-----------------+--------------+--------------------+----------------+-----------------------+
+        |  1 |    1 | message1 | /opt/zimbra/store |        12 |               8 |           12 |                  8 |              0 |                  4096 |
+        |  2 |   10 | index1   | /opt/zimbra/index |        12 |               8 |           12 |                  8 |              0 |                  4096 |
+        +----+------+----------+-------------------+-----------+-----------------+--------------+--------------------+----------------+-----------------------+
+        /opt/zimbra/index（用户目录）
+        /opt/zimbra/store（消息目录）
+
+
+
+获取所有用户
+/opt/zimbra/openldap/bin/ldapsearch -LLL -x -D"`/opt/zimbra/bin/zmlocalconfig -s zimbra_ldap_userdn | awk '{print $3}'`" -w"`/opt/zimbra/bin/zmlocalconfig -s zimbra_ldap_password | awk '{print $3}'`" -H `/opt/zimbra/bin/zmlocalconfig ldap_url | awk '{print $3}'` $* | grep ^mail | awk '{print $2}' | sort
+
+获取所有用户的mailbox大小
+all_accounts=`zmprov -l gaa`; for account in $all_accounts; do mbox_size=`zmmailbox -z -m $account gms`; echo "Mailbox size of $account = $mbox_size"; done ;
+
+获取单用户mailbox大小
+/opt/zimbra/bin/zmmailbox -z -m admin@admin.local gms
+
+
+单用户邮件导出https://pario.no/2012/08/02/backup-of-zimbra-mailbox-using-zmmailbox/
+
+/opt/zimbra/bin/zmmailbox -z -m admin@admin.local getRestURL "//?fmt=tgz" >  admin@admin.local.tgz
+
+拉邮件的时候，admin@admin.local.tgz这种文件名太明显，可以用md5加工处理以下。得到hash过的文件名，在已知用户名的前提下，也能还原。
+
+/opt/zimbra/bin/zmmailbox -z -m admin@admin.local getRestURL "//?fmt=tgz" > `echo admin@admin.local | md5sum | awk ‘{print $1}’`.tgz
+
+批量导出mail
+导出用户列表到txt文件
+for循环执行单用户邮件导出
+for i in `cat /tmp/UUID.tmp`; do /opt/zimbra/bin/zmmailbox -z -m $i getRestURL "//?fmt=tgz" > `echo $i | md5sum | awk '{print $1}'`.tgz;done
+
+
+

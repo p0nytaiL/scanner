@@ -1,8 +1,8 @@
 #!/usr/bin/python
 #coding=utf-8
 
-from PackageThread.JobQueue import Job
 from PackageScanner.Functions.DNS.dnslib.dns import *
+from PackageScanner.JobQueue import Job
 
 top_level_nameservers = [
     {'type': 'A', 'address': '198.41.0.4'},

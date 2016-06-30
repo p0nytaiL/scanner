@@ -1,0 +1,15 @@
+UPnP不同类别的应用使用不同的上层协议进行控制。
+其中简单服务发现协议(Simple Servic e Discovery Protocol)
+	UPnP控制点如何发现网络上的UPnP服务,
+	UPnP设备如何 向网络发布自己所能提供的服务;
+
+普通事件架构协议 (Generic Event Notification Archi tecture)
+	UPnP设备如何利用UDP和TCP来接受和发送事件通知,
+	通知预订者 和发布者的概念以启动事件;
+
+简单对象访问协议(Simple Object Access Protocol)
+	可扩展标记语言(XML)和HTTP的使用来执行远程调用,
+	每个UPnP控制请求以及响应都是一个S OAP消息。
+
+
+UPnP设备制造商定义自己设备的相 关信息,比如设备名称、型号、序列号、厂商信息等等。

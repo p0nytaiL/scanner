@@ -2,7 +2,8 @@
 #coding=utf-8
 
 import sys
-from PackageThread.JobQueue import Job,JobQueue_v1
+
+from PackageScanner.JobQueue import JobQueue_v1
 from PackageScanner.OutputFormatter import OutputFormatter
 
 

