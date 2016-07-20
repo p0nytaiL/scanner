@@ -2,7 +2,7 @@ import requests
 import urllib,urlparse
 from PackageSearchEngine.SearchEngine import SearchEngine
 from PackageHTTP.UserAgents import getRandomAgent
-from PackageHTTP.Body import HTTPBodyResponse
+from PackageHTTP.Body import HTTPBodyResponseHTML
 '''
     def CreateByPassCookie(self):
         # ------------- cookie ------------
@@ -26,9 +26,9 @@ from PackageHTTP.Body import HTTPBodyResponse
 '''
 
 
-class BingResponse(HTTPBodyResponse):
+class BingResponse(HTTPBodyResponseHTML):
     def __init__(self, body, encoding):
-        HTTPBodyResponse.__init__(self, body, encoding)
+        HTTPBodyResponseHTML.__init__(self, body, encoding)
 
 
     @property
@@ -45,7 +45,7 @@ class BingResponse(HTTPBodyResponse):
 
 class BingResponseLinks(BingResponse):
     def __init__(self, body, encoding):
-        HTTPBodyResponse.__init__(self, body, encoding)
+        HTTPBodyResponseHTML.__init__(self, body, encoding)
         self.bool_raw = True
 
     def extractResults(self):
