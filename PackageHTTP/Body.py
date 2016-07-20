@@ -186,6 +186,30 @@ class HTTPBodyResponseHTML(HTTPBodyResponseText):
     def extractResults(self):
         pass
 
+import json
+class HTTPBodyJsonResponse(HTTPBody):
+    def __init__(self, body, encoding):
+        HTTPBody.__init__(self)
+        self.body = body
+        self.encoding = encoding
+        self.json_body = None
+        self._parse()
+
+    def _parse(self):
+        if self.json_body != None:
+            return
+        try:
+            self.dom_body = json.loads(self.body)
+        except Exception as e:
+            self.exception = e
+
+    @property
+    def title(self):
+        return ''
+
+    #页面解析
+    def extractResults(self):
+        pass
 
 
 
